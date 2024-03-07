@@ -1,0 +1,354 @@
+# Etiquetas multimedia HTML5
+
+
+HTML5 ofrece una variedad de etiquetas para integrar contenido multimedia en tus páginas web, como imágenes, audio y video. Estas etiquetas te permiten controlar la presentación y el comportamiento del contenido multimedia, mejorando la experiencia del usuario.
+
+## 1\. Etiqueta `<img>` para imágenes:
+
+-   Sintaxis básica: `<img src="ruta_imagen.jpg" alt="texto alternativo">`
+-   Atributos:
+    -   `src`: Ruta de la imagen.
+    -   `alt`: Texto alternativo que se muestra si la imagen no se carga.
+    -   `width`: Ancho de la imagen en píxeles o porcentaje.
+    -   `height`: Altura de la imagen en píxeles o porcentaje.
+    -   `title`: Texto informativo que se muestra al pasar el cursor sobre la imagen.
+    -   `longdesc`: URL a una descripción larga de la imagen.
+-   Ejemplo:
+
+
+```html
+<img src="paisaje.jpg" alt="Foto de un paisaje" width="400" height="300">
+
+```
+
+## 2\. Etiqueta `<video>` para videos:
+
+-   Sintaxis básica: `<video src="ruta_video.mp4" controls> </video>`
+-   Atributos:
+    -   `src`: Ruta del archivo de video.
+    -   `controls`: Muestra controles de reproducción (play, pausa, volumen).
+    -   `autoplay`: Reproduce el video automáticamente al cargar la página.
+    -   `loop`: Reproduce el video en bucle.
+    -   `width`: Ancho del video en píxeles o porcentaje.
+    -   `height`: Altura del video en píxeles o porcentaje.
+    -   `poster`: Imagen que se muestra antes de que el video comience a reproducirse.
+-   Ejemplo:
+
+
+```html
+<video src="video.mp4" controls width="640" height="480"></video>
+
+```
+
+## 3\. Etiqueta `<audio>` para audio:
+
+-   Sintaxis básica: `<audio src="ruta_audio.mp3" controls> </audio>`
+-   Atributos:
+    -   `src`: Ruta del archivo de audio.
+    -   `controls`: Muestra controles de reproducción (play, pausa, volumen).
+    -   `autoplay`: Reproduce el audio automáticamente al cargar la página.
+    -   `loop`: Reproduce el audio en bucle.
+-   Ejemplo:
+
+```html
+<audio src="cancion.mp3" controls></audio>
+
+```
+
+## 4\. Etiqueta `<source>` para formatos alternativos:
+
+-   Sintaxis: `<video><source src="video.mp4" type="video/mp4"><source src="video.webm" type="video/webm"></video>`
+-   Atributos:
+    -   `src`: Ruta del archivo multimedia.
+    -   `type`: Tipo de archivo multimedia (video/mp4, audio/mp3, etc.).
+-   Ejemplo:
+
+Este código ofrece dos formatos de video, MP4 y WebM, para garantizar la compatibilidad con diferentes navegadores.
+
+```html
+<video controls>
+  <source src="video.mp4" type="video/mp4">
+  <source src="video.webm" type="video/webm">
+</video>
+
+```
+
+## 5\. Etiqueta `<track>` para subtítulos y pistas de audio:
+
+-   Sintaxis: `<video><track src="subtitulos.srt" kind="subtitles" srclang="es"></video>`
+-   Atributos:
+    -   `src`: Ruta del archivo de subtítulos o pista de audio.
+    -   `kind`: Tipo de pista ("subtitles" para subtítulos, "captions" para leyendas, "descriptions" para audiodescripciones).
+    -   `srclang`: Código de idioma de la pista.
+-   Ejemplo:
+
+```html
+<video controls>
+  <source src="video.mp4" type="video/mp4">
+  <track src="subtitulos.srt" kind="subtitles" srclang="es"></track>
+</video>
+
+```
+
+# La etiqueta `<table>` en HTML
+
+La etiqueta `<table>` en HTML se utiliza para crear una tabla, que es una estructura de datos que organiza la información en filas y columnas. Las tablas son útiles para presentar información tabular, como datos financieros, listas de productos o calendarios.
+
+Sintaxis básica:
+
+```html
+<table>
+
+</table>
+
+```
+
+Elementos importantes dentro de la tabla:
+
+-   `<tr>`: Define una fila de la tabla.
+-   `<td>`: Define una celda dentro de una fila.
+-   `<th>`: Define una celda de encabezado dentro de una fila.
+-   `<caption>`: Define un título para la tabla.
+
+Atributos comunes de la etiqueta `<table>`:
+
+-   `border`: Especifica el grosor del borde de la tabla.
+-   `width`: Especifica el ancho de la tabla.
+-   `height`: Especifica la altura de la tabla.
+-   `cellspacing`: Especifica el espacio entre las celdas.
+-   `cellpadding`: Especifica el espacio entre el contenido y el borde de las celdas.
+-   `align`: Especifica la alineación de la tabla (izquierda, derecha o centro).
+
+Ejemplo de una tabla simple:
+
+
+```html
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Edad</th>
+  </tr>
+  <tr>
+    <td>Juan</td>
+    <td>25</td>
+  </tr>
+  <tr>
+    <td>María</td>
+    <td>30</td>
+  </tr>
+</table>
+```
+
+## Etiquetas `<thead>`, `<tbody>` y `<tfoot>` en HTML
+
+Las etiquetas `<thead>`, `<tbody>` y `<tfoot>` se utilizan para definir las diferentes secciones de una tabla en HTML. Estas etiquetas son importantes para mejorar la accesibilidad, la legibilidad y el estilo de las tablas.
+
+## 1\. `<thead>` (Encabezado):
+
+-   Define la sección de encabezado de la tabla.
+-   Contiene los títulos de las columnas.
+-   Se suele mostrar en negrita o con un estilo diferente para que sea fácilmente visible.
+-   Ejemplo:
+
+
+```html
+<thead>
+  <tr>
+    <th>Nombre</th>
+    <th>Edad</th>
+  </tr>
+</thead>
+
+```
+
+## 2\. `<tbody>` (Cuerpo):
+
+-   Define la sección del cuerpo de la tabla.
+-   Contiene los datos de la tabla.
+-   Puede contener filas y celdas con diferentes formatos.
+-   Ejemplo:
+
+```html
+<tbody>
+  <tr>
+    <td>Juan</td>
+    <td>25</td>
+  </tr>
+  <tr>
+    <td>María</td>
+    <td>30</td>
+  </tr>
+</tbody>
+
+```
+
+## 3\. `<tfoot>` (Pie de página):
+
+-   Define la sección de pie de página de la tabla.
+-   Se puede usar para mostrar información adicional, como totales o resúmenes.
+-   No es obligatorio usar esta etiqueta.
+-   Ejemplo:
+
+```html
+<tfoot>
+  <tr>
+    <th colspan="2">Total</th>
+    <td>55</td>
+  </tr>
+</tfoot>
+
+```
+
+## Beneficios de usar estas etiquetas:
+
+-   Accesibilidad: Las etiquetas ayudan a los lectores de pantalla a comprender la estructura de la tabla.
+-   Legibilidad: Las etiquetas ayudan a los usuarios a identificar las diferentes secciones de la tabla.
+-   Estilo: Las etiquetas permiten aplicar diferentes estilos a cada sección de la tabla.
+
+## Ejemplo completo de una tabla con `<thead>`, `<tbody>` y `<tfoot>`:
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabla de empleados</title> 
+</head>
+<body>
+  <h1>Tabla de empleados</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Cargo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Juan Pérez</td>
+        <td>25</td>
+        <td>Desarrollador</td>
+      </tr>
+      <tr>
+        <td>María García</td>
+        <td>30</td>
+        <td>Diseñadora</td>
+      </tr>
+      <tr>
+        <td>Pedro López</td>
+        <td>40</td>
+        <td>Gerente</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th colspan="3">Total de empleados: 3</th>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>
+
+```
+
+## Explicación del código:
+
+-   Se define el tipo de documento como HTML5.
+-   Se define el idioma de la página como español.
+-   Se define el título de la página.
+-   Se crea un encabezado para la tabla.
+-   Se crea el cuerpo de la tabla con filas y celdas.
+-   Se crea un pie de página para la tabla con información adicional.
+
+
+## Atributos `colspan` y `rowspan` 
+
+Los atributos `colspan` y `rowspan` se utilizan para combinar celdas en una tabla HTML.
+
+## 1\. `colspan`:
+
+-   Combina dos o más celdas horizontalmente.
+-   Se usa en la etiqueta `<td>`.
+-   Ejemplo:
+
+```html
+<tr>
+  <td colspan="2">Nombre completo</td>
+  <td>Edad</td>
+</tr>
+
+```
+
+## 2\. `rowspan`:
+
+-   Combina dos o más celdas verticalmente.
+-   Se usa en la etiqueta `<td>`.
+-   Ejemplo:
+
+```html
+<tr>
+  <th>Nombre</th>
+  <td rowspan="2">Descripción</td>
+</tr>
+<tr>
+  <td>Juan Pérez</td>
+</tr>
+```
+
+## Ejemplo de tabla usando `colspan` y `rowspan` 
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabla con colspan y rowspan</title>
+</head>
+<body>
+  <h1>Tabla de productos</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th>Stock</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="2">
+          <img src="imagen_producto.jpg" alt="Producto">
+        </td>
+        <td>Nombre del producto</td>
+        <td>$100</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>Descripción detallada del producto</td>
+        <td>$120</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td colspan="2">Producto similar</td>
+        <td>$80</td>
+        <td>20</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
+
+```
+
+## Explicación del código:
+
+-   Se define el tipo de documento como HTML5.
+-   Se define el idioma de la página como español.
+-   Se define el título de la página.
+-   Se crea un encabezado para la tabla.
+-   Se crea el cuerpo de la tabla con filas y celdas.
+-   Se usa `colspan` para combinar dos celdas horizontalmente en la primera fila.
+-   Se usa `rowspan` para combinar dos celdas verticalmente en la primera fila.
+-   Se agregan imágenes a las celdas.
