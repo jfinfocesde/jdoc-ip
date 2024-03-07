@@ -11,7 +11,7 @@ import { MenuProps, Image } from 'antd';
 import { Anchor, Button, Drawer, Flex, Layout, Menu, Typography, theme } from 'antd';
 import { usePathname } from 'next/navigation';
 import { ItemType } from 'antd/es/menu/hooks/useItems';
-import { itemsInfo, modedev } from './page.menu';
+import { infoCourse, itemsInfo, modedev } from './page.menu';
 
 const { Text } = Typography;
 const { Header, Content, Footer, Sider } = Layout;
@@ -241,7 +241,7 @@ export default function RootLayout({
                             ) : (<></>)}
                             <Flex style={boxStyle} justify='center' align='center' >
                                 <Text type="success" strong style={{ maxWidth: '80%', fontSize: '1.5em' }} ellipsis>
-                                    LÓGICA DE PROGRAMACIÓN
+                                    {infoCourse.title.toUpperCase()}
                                 </Text>
                             </Flex>
                             {breakpoint ? (
