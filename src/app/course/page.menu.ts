@@ -14,7 +14,7 @@ interface itemsInfoType {
 export const modedev = false
 
 export const infoCourse = {
-    title: "Introducción a la programación de Programación",
+    title: "Introducción a la programación",
     description: "En este curso, aprenderás los fundamentos del desarrollo web con HTML y CSS. Te enseñaremos cómo crear páginas web que sean atractivas, funcionales y fáciles de usar.",
     image: "https://pro.guslyon.fr/static/html-css-67ea05e3879abd11f82b077273760d2f.png"
 }
