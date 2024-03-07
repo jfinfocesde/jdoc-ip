@@ -110,7 +110,7 @@ Atributos:
 Ejemplo:
 
 ```html
-<input type="text" name="nombre" placeholder="Nombre">
+<input type="text" name="nombre" id="nombre" placeholder="Nombre">
 <label for="nombre">Nombre</label>
 
 ```
@@ -139,7 +139,7 @@ Atributos:
 Ejemplo:
 
 ```html
-<input type="password" name="contraseña" placeholder="Contraseña">
+<input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
 <label for="contraseña">Contraseña</label>
 
 ```
@@ -169,9 +169,9 @@ Atributos:
 Ejemplo:
 
 ```html
-<input type="radio" name="sexo" value="hombre"> Hombre
+<input type="radio" name="sexo" id="hombre" value="hombre"> 
 <label for="hombre">Hombre</label>
-<input type="radio" name="sexo" value="mujer"> Mujer
+<input type="radio" name="sexo" name="mujer" value="mujer"> 
 <label for="mujer">Mujer</label>
 
 ```
@@ -239,9 +239,9 @@ Ejemplo:
 
 
 ```html
-<input type="checkbox" name="intereses" value="deporte"> Deportes
-<label for="intereses">Deportes</label>
-<input type="checkbox" name="intereses" value="cine"> Cine
+<input type="checkbox" name="deporte" id="deporte" value="deporte"> 
+<label for="deporte">Deportes</label>
+<input type="checkbox" name="cine" id="cine" value="cine"> 
 <label for="cine">Cine</label>
 
 ```
@@ -268,7 +268,7 @@ Ejemplo:
 
 
 ```html
-<input type="submit" value="Enviar">
+<input type="submit" value="Enviar" id="enviar">
 <label for="enviar">Enviar</label>
 
 ```
@@ -297,7 +297,7 @@ Atributos:
 Ejemplo:
 
 ```html
-<input type="reset" value="Restablecer">
+<input type="reset" value="Restablecer" id="restablecer">
 <label for="restablecer">Restablecer</label>
 
 ```
@@ -325,7 +325,7 @@ Atributos:
 Ejemplo:
 
 ```html
-<input type="file" name="archivo">
+<input type="file" name="archivo" id="archivo">
 <label for="archivo">Archivo</label>
 
 ```
@@ -352,7 +352,7 @@ Atributos:
 Ejemplo:
 
 ```html
-<input type="color" name="color">
+<input type="color" name="color" id="color"> 
 <label for="color">Color</label>
 
 ```
@@ -382,7 +382,7 @@ Atributos:
 Ejemplo:
 
 ```html
-<input type="date" name="fecha">
+<input type="date" name="fecha" id="fecha">
 <label for="fecha">Fecha</label>
 
 ```
@@ -412,7 +412,7 @@ Atributos:
 Ejemplo:
 
 ```html
-<input type="time" name="hora">
+<input type="time" name="hora" id="hora">
 <label for="hora">Hora</label>
 
 ```
@@ -442,7 +442,7 @@ Atributos:
 Ejemplo:
 
 ```html
-<input type="datetime-local" name="fecha_hora">
+<input type="datetime-local" name="fecha_hora" id="fecha_hora">
 <label for="fecha_hora">Fecha y hora</label>
 
 ```
@@ -472,7 +472,7 @@ Atributos:
 Ejemplo:
 
 ```html
-<input type="week" name="semana">
+<input type="week" name="semana" id="semana">
 <label for="semana">Semana</label>
 
 ```
@@ -507,7 +507,7 @@ Atributos:
 Ejemplo:
 
 ```html
-<input type="tel" name="teléfono">
+<input type="tel" name="teléfono" id="teléfono">
 <label for="teléfono">Teléfono</label>
 
 ```
@@ -561,7 +561,7 @@ Atributos:
 Ejemplo:
 
 ```html
-<input type="url" name="sitio_web">
+<input type="url" name="sitio_web" id="sitio_web">
 <label for="sitio_web">Sitio web</label>
 
 ```
@@ -589,7 +589,7 @@ Atributos:
 Ejemplo:
 
 ```html
-<input type="email" name="correo_electrónico">
+<input type="email" name="correo_electrónico" id="correo_electrónico">
 <label for="correo_electrónico">Correo electrónico</label>
 ```
 
@@ -617,7 +617,7 @@ Atributos:
 Ejemplo:
 
 ```html
-<input type="number" name="edad">
+<input type="number" name="edad" id="edad">
 <label for="edad">Edad</label>
 
 ```
@@ -695,9 +695,9 @@ En este ejemplo, el usuario no podrá enviar el formulario sin ingresar un núme
 
     <!-- Ejemplo de casillas de verificación -->
     <div>
-        <input type="checkbox" name="intereses" value="deporte" id="deporte">
+        <input type="checkbox" name="deporte" value="deporte" id="deporte">
         <label for="deporte">Deportes</label>
-        <input type="checkbox" name="intereses" value="cine" id="cine">
+        <input type="checkbox" name="cine" value="cine" id="cine">
         <label for="cine">Cine</label>
     </div>
 
