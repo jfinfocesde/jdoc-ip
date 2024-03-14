@@ -45,7 +45,7 @@ export default function RootLayout({
         setcollapsed(!collapsed)
     }
 
-    
+
     const path = usePathname()
     //Sider left ------------------------------------------------------------------------------------------------
     const [breakpoint, setBreakpoint] = useState(false)
@@ -169,7 +169,7 @@ export default function RootLayout({
         },
     ) => {
         onClose()
-        e.preventDefault();        
+        e.preventDefault();
     };
 
     //Drawer ---------------------------------------------------------------------------------------------------------------
@@ -194,7 +194,7 @@ export default function RootLayout({
                     collapsed={breakpoint ? collapsed : false}
                     onBreakpoint={(broken) => {
                         setBreakpoint(broken)
-                    }}                   
+                    }}
                     style={{ overflow: 'auto', height: '100vh', position: 'fixed', left: 0, top: 0, bottom: 0, zIndex: 5000 }}
                 >
                     <Flex justify='space-between' align='center' >
@@ -218,7 +218,7 @@ export default function RootLayout({
                     width={250}
                     onBreakpoint={(broken) => {
                         setBreakpoint(broken)
-                    }}                   
+                    }}
                     style={{ overflow: 'auto', height: '100vh', position: 'fixed', right: 0, top: 0, bottom: 0 }}
                 >
                     <h3 style={{ margin: 10 }}>Tabla de Contenido</h3>
@@ -249,9 +249,9 @@ export default function RootLayout({
                                     showDrawer()
                                     setcollapsed(true)
                                 }} />
-                            ) : (<> </>)} 
-                        </Flex>                       
-                    </Header>                   
+                            ) : (<> </>)}
+                        </Flex>
+                    </Header>
                     <Content style={{ margin: '24px 16px 0', overflow: 'initial', padding: '10px' }}>
                         {children}
                     </Content>

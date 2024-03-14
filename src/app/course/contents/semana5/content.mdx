@@ -1,188 +1,252 @@
-# Conversión de tipos en Java
+import { Image,Flex } from 'antd';
 
- 
-La conversión de tipos de datos en Java es un proceso mediante el cual se convierte un valor de un tipo de dato en otro. Java tiene dos tipos de conversión de datos: la conversión implícita y la conversión explícita.
+# Fundamentación de los Sistemas de Control de Versiones
+------------------------------------------------------
 
-La conversión implícita se produce automáticamente cuando se asigna un valor de un tipo de dato a una variable de otro tipo de datos compatible. Por ejemplo, si se asigna un valor de tipo "int" a una variable de tipo "double", Java realiza la conversión automáticamente.
+## ¿Qué son?
 
-```java
-int x = 5;
-double y = x; // Conversión implícita de int a double
-```
-La conversión explícita, también conocida como "casting", se utiliza cuando se desea convertir un valor de un tipo de dato a otro tipo de datos que no es compatible de forma implícita. Para hacer una conversión explícita, se debe utilizar una sintaxis especial que indica al compilador que se desea convertir el valor a otro tipo de datos.
+Los sistemas de control de versiones (SCV) son herramientas que permiten el seguimiento y la gestión de cambios en archivos o conjuntos de archivos a lo largo del tiempo. Permiten:
 
-```java
-double x = 3.14;
-int y = (int) x; // Conversión explícita de double a int
-```
-En este ejemplo, se utiliza la sintaxis "(int)" para indicar que se desea convertir el valor "x" de tipo "double" a un valor de tipo "int". Es importante tener en cuenta que la conversión explícita puede provocar la pérdida de información si se intenta convertir un valor a un tipo de datos con menos precisión.
+-   Registrar las modificaciones: Cada cambio realizado en un archivo se guarda como una nueva versión, creando un historial completo del desarrollo.
+-   Recuperar versiones anteriores: Si se comete un error o se desea volver a una versión anterior del proyecto, es posible hacerlo con facilidad.
+-   Colaborar en equipo: Los SCV facilitan el trabajo en equipo, permitiendo a varios usuarios trabajar en el mismo proyecto de forma simultánea y sincronizada.
+-   Compartir el código: Los SCV permiten compartir el código de forma pública o privada, facilitando la colaboración con otros desarrolladores.
 
-Además de las conversiones implícitas y explícitas, Java también proporciona métodos para convertir valores entre diferentes tipos de datos, como los métodos "valueOf()" y "parseXxx()" de la clase "String". Estos métodos se utilizan para convertir valores de tipo "String" a otros tipos de datos, como "int" o "double".
+## Beneficios
 
-## Método parseXxx()
+-   Mejora la calidad del código: Permite realizar un seguimiento de los cambios y revertir errores fácilmente.
+-   Facilita la colaboración: Permite trabajar en equipo de forma eficiente y segura.
+-   Aumenta la productividad: Ahorra tiempo al evitar la duplicación de trabajo y la pérdida de datos.
+-   Mejora la comunicación: Permite a los desarrolladores comprender mejor la evolución del proyecto.
+-   Promueve la transparencia: Permite a todos los miembros del equipo tener acceso al historial del proyecto.
 
-En Java, los métodos parseXxx() se utilizan para convertir una representación de cadena (String) en un valor de tipo primitivo o un objeto de clase envolvente. Aquí tienes algunos ejemplos de métodos parseXxx() para diferentes tipos de datos:
+# ¿Qué es Git?
 
-- **parseInt()** - Convierte una cadena en un valor entero (int):
+Git es un sistema de control de versiones distribuido, de código abierto y gratuito, utilizado para el seguimiento y la gestión de cambios en archivos o conjuntos de archivos.
 
-```java  
-String numberStr = "123";
-int number = Integer.parseInt(numberStr);
-System.out.println(number); // Salida: 123
-```
+## Beneficios de usar Git
 
-- **parseDouble()** - Convierte una cadena en un valor de punto flotante (double):
+-   Control de versiones: Permite realizar un seguimiento de todos los cambios realizados en el proyecto.
+-   Colaboración: Permite trabajar en equipo de forma eficiente y segura.
+-   Reversibilidad: Permite volver a una versión anterior del proyecto en caso de errores.
+-   Eficiencia: Ahorra tiempo al evitar la duplicación de trabajo y la pérdida de datos.
+-   Flexibilidad: Permite trabajar con diferentes branches y realizar merges de forma sencilla.
+-   Seguridad: Protege los archivos contra la pérdida accidental o la corrupción.
 
-```java  
-String decimalStr = "3.14";
-double decimal = Double.parseDouble(decimalStr);
-System.out.println(decimal); // Salida: 3.14
-```
+## Flujo de trabajo en Git
 
-- **parseBoolean()** - Convierte una cadena en un valor booleano (boolean):
+<Flex gap="middle" align="center" vertical>
+ <Image
+    style={{borderRadius:10}}
+    preview={false}
+    width={'60%'}
+    src="https://neurathsboat.blog/post/git-intro/img/Git_trees.png"
+  />
+</Flex>
 
-```java  
-String boolStr = "true";
-boolean boolValue = Boolean.parseBoolean(boolStr);
-System.out.println(boolValue); // Salida: true
-```
+# Comandos de configuración inicial de Git
 
-- **parseLong()** - Convierte una cadena en un valor entero largo (long):
+Al iniciar con Git, hay algunos comandos que puedes usar para personalizar tu experiencia y optimizar tu flujo de trabajo. Estos son algunos de los comandos más comunes para la configuración inicial:
 
-```java  
-String floatStr = "2.71828";
-float floatValue = Float.parseFloat(floatStr);
-System.out.println(floatValue); // Salida: 2.71828
-```
+Configurar tu nombre y correo electrónico:
 
-- **parseFloat()** - Convierte una cadena en un valor de punto flotante de precisión simple (float):
-
-```java  
-String longStr = "9876543210";
-long longValue = Long.parseLong(longStr);
-System.out.println(longValue); // Salida: 9876543210
-```
-## Método valueOf()
-
-El método valueOf() en Java se utiliza para convertir un tipo de dato primitivo o una cadena en un objeto de clase envolvente (wrapper class). Aquí tienes un ejemplo de cómo se puede utilizar el método valueOf():
-
-```java  
-// Ejemplo 1: Converting a String to Integer object
-String numberStr = "123";
-Integer numberObj = Integer.valueOf(numberStr);
-System.out.println(numberObj); // Salida: 123
-
-// Ejemplo 2: Converting a String to Double object
-String decimalStr = "3.14";
-Double decimalObj = Double.valueOf(decimalStr);
-System.out.println(decimalObj); // Salida: 3.14
-
-// Ejemplo 3: Converting an int to Integer object
-int intValue = 42;
-Integer intObj = Integer.valueOf(intValue);
-System.out.println(intObj); // Salida: 42
-
-// Ejemplo 4: Converting a boolean to Boolean object
-boolean boolValue = true;
-Boolean boolObj = Boolean.valueOf(boolValue);
-System.out.println(boolObj); // Salida: true
-```
-
-
-
-# Clase Math en Java
-
-`Math` es una clase en Java que proporciona métodos para realizar operaciones matemáticas comunes. No es necesario crear un objeto de la clase `Math` para usar sus métodos, ya que son estáticos.
-
-Explicación:
-
-La clase `Math` contiene una amplia variedad de métodos para realizar operaciones matemáticas como:
-
--   Operaciones básicas: suma, resta, multiplicación, división, potenciación y radicación.
--   Funciones trigonométricas: seno, coseno, tangente, arco seno, arco coseno y arco tangente.
--   Funciones logarítmicas: logaritmo natural (ln) y logaritmo en base 10 (log10).
--   Funciones exponenciales: exponenciación natural (exp) y exponenciación en base 10 (pow10).
--   Funciones de redondeo: `floor`, `ceil` y `round`.
--   Funciones de comparación: `min`, `max` y `abs`.
--   Generación de números aleatorios: `random`.
+-   `git config --global user.name "Tu nombre completo"`: Establece tu nombre de usuario global.
+-   `git config --global user.email "tucorreo@email.com"`: Establece tu correo electrónico global.
 
 Ejemplos:
 
-## 1\. Operaciones básicas:
+-   Para establecer el nombre de usuario global:
 
-```java
-int suma = Math.add(1, 2); // Suma 1 y 2, resultado: 3
-int resta = Math.subtract(5, 3); // Resta 3 de 5, resultado: 2
-int producto = Math.multiply(4, 5); // Multiplica 4 por 5, resultado: 20
-int division = Math.divide(10, 2); // Divide 10 entre 2, resultado: 5
-double potencia = Math.pow(2, 3); // Eleva 2 a la potencia 3, resultado: 8
-double raizCuadrada = Math.sqrt(9); // Calcula la raíz cuadrada de 9, resultado: 3
+```bash
+git config --global user.name "Juan Pérez"
+git config --global user.email "juanperez@gmail.com"
+
+```
+-   Para mostrar todas las configuraciones:
+
+```bash
+git config --list
+```
+
+# El comando git --version
+
+Se utiliza para verificar qué versión de Git está instalada.
+
+```bash   
+git --version
+```
+
+# Comandos de básicos de Git
+
+## `git init`
+
+Este comando crea un nuevo repositorio Git en el directorio actual. Un repositorio Git es una carpeta que contiene el historial de commits, las ramas y la configuración del proyecto.
+
+Ejemplo:
+
+```bash
+mkdir mi_proyecto
+cd mi_proyecto
+git init
 
 ```
 
-## 2\. Funciones trigonométricas:
+Explicación:
 
-```java
-double seno = Math.sin(Math.PI / 2); // Calcula el seno de 90 grados, resultado: 1
-double coseno = Math.cos(Math.PI); // Calcula el coseno de 180 grados, resultado: -1
-double tangente = Math.tan(Math.PI / 4); // Calcula la tangente de 45 grados, resultado: 1
+-   `mkdir mi_proyecto`: Crea una nueva carpeta llamada `mi_proyecto`.
+-   `cd mi_proyecto`: Cambia el directorio actual a `mi_proyecto`.
+-   `git init`: Inicializa un nuevo repositorio Git en la carpeta `mi_proyecto`.
 
-```
+Resultado:
 
-## 3\. Funciones logarítmicas:
+-   Se crea un archivo `.git` en la carpeta `mi_proyecto`. Este archivo contiene metadatos sobre el repositorio, como el historial de commits y la configuración.
 
-```java
-double ln = Math.log(Math.E); // Calcula el logaritmo natural de e, resultado: 1
-double log10 = Math.log10(100); // Calcula el logaritmo en base 10 de 100, resultado: 2
+## `git add`
 
-```
+Este comando agrega archivos al área de preparación para el siguiente commit. El área de preparación es un espacio temporal donde se almacenan los cambios antes de ser confirmados en el historial del proyecto.
 
-## 4\. Funciones exponenciales:
+Ejemplo:
 
-```java
-double exp = Math.exp(1); // Calcula la exponenciación natural de 1, resultado: 2.71828...
-double pow10 = Math.pow(10,2); // Calcula 10 elevado a la potencia 2, resultado: 100
+```bash
+git add archivo.txt
 
 ```
 
-## 5\. Funciones de redondeo:
+Explicación:
 
-```java
-double floor = Math.floor(3.14); // Redondea 3.14 hacia abajo, resultado: 3
-double ceil = Math.ceil(3.14); // Redondea 3.14 hacia arriba, resultado: 4
-double round = Math.round(3.5); // Redondea 3.5 al entero más cercano, resultado: 4
+-   `git add archivo.txt`: Agrega el archivo `archivo.txt` al área de preparación.
 
-```
+Resultado:
 
-## 6\. Funciones de comparación:
+-   El archivo `archivo.txt` se marca como listo para ser incluido en el siguiente commit.
 
-```java
-int min = Math.min(1, 2); // Devuelve el mínimo entre 1 y 2, resultado: 1
-int max = Math.max(1, 2); // Devuelve el máximo entre 1 y 2, resultado: 2
-int abs = Math.abs(-5); // Devuelve el valor absoluto de -5, resultado: 5
+## `git add .`
 
-```
+El comando git add . en Git se utiliza para agregar todos los archivos modificados y no rastreados en tu directorio actual al área de preparación para la siguiente confirmación (commit).
 
-## 7\. Generación de números aleatorios:
-
-```java
-double numeroAleatorio = Math.random(); // Genera un número aleatorio entre 0.0 y 1.0
+```bash
+git add .
 
 ```
 
-## 8\. Generación de un número aleatorio entre 10 y 20:
+## `git commit`
 
-```java
-int min = 10;
-int max = 20;
-int amplitud = max - min;
+Este comando crea un commit con los cambios del área de preparación. Un commit es una instantánea permanente del estado del proyecto en un momento determinado.
 
-double numeroAleatorio = Math.random();
-int numeroFinal = (int) (numeroAleatorio * amplitud) + min;
+Ejemplo:
 
-System.out.println("Número aleatorio entre " + min + " y " + max + ": " + numeroFinal);
+```bash
+git commit -m "Mensaje del commit"
 
 ```
 
+Explicación:
 
+-   `git commit`: Crea un commit con los cambios del área de preparación.
+-   `-m "Mensaje del commit"`: Especifica un mensaje que describe los cambios en el commit.
 
+Resultado:
+
+-   Se crea un nuevo commit en el historial del proyecto. El commit contiene los cambios que se agregaron al área de preparación.
+
+## `git commit -am`
+
+El comando git commit -am "mensaje" en Git es una forma abreviada de confirmar tus cambios junto con un mensaje de confirmación. 
+
+```bash
+git commit -am "Mensaje del commit"
+
+```
+
+## `git clone`
+
+Este comando clona un repositorio remoto en tu equipo local. Crea una copia del repositorio en tu computadora para que puedas trabajar en él.
+
+Ejemplo:
+
+```bash
+git clone https://url_del_repositorio.git
+
+```
+
+Explicación:
+
+-   `git clone https://url_del_repositorio.git`: Clona el repositorio remoto ubicado en `https://url_del_repositorio.git` en la carpeta actual.
+
+Resultado:
+
+-   Se crea una copia del repositorio remoto en la carpeta actual.
+-   La copia local del repositorio está sincronizada con la versión remota.
+
+## `git push`
+
+Este comando envía los cambios locales al repositorio remoto. Sube tus cambios al repositorio para que otros puedan acceder a ellos.
+
+Ejemplo:
+
+```bash
+git push
+
+```
+
+Explicación:
+
+-   `git push`: Envía los cambios locales al repositorio remoto.
+
+Resultado:
+
+-   Los cambios que se han confirmado en la rama actual se envían al repositorio remoto.
+-   La versión remota del repositorio se actualiza con los cambios locales.
+
+## `git pull`
+
+-   La versión local del repositorio se actualiza con los últimos cambios del repositorio remoto.
+
+Ejemplo:
+
+```bash
+git pull
+
+```
+
+# Que es Github?
+
+## GitHub se puede entender como dos cosas:
+
+1.  Almacenamiento de código con control de versiones: En esencia, GitHub es una plataforma en la nube que permite a los desarrolladores alojar sus proyectos de código fuente. Funciona utilizando un sistema de control de versiones llamado Git, que realiza un seguimiento de todos los cambios realizados en el código a lo largo del tiempo. Esto permite a los desarrolladores volver a versiones anteriores del código si es necesario, y colaborar fácilmente en proyectos con otros.
+
+2.  Plataforma para colaboración: GitHub va más allá del simple almacenamiento de código. Ofrece una variedad de herramientas que facilitan la colaboración entre desarrolladores. Estas herramientas incluyen:
+
+    -   Control de acceso: Puedes establecer permisos para controlar quién puede ver y modificar el código de tu proyecto.
+    -   Problema de seguimiento: Puedes crear y rastrear errores y tareas pendientes relacionadas con tu proyecto.
+    -   Solicitudes de extracción (Pull requests): Esta función permite a los desarrolladores proponer cambios al código de un proyecto para que sean revisados y fusionados por otros colaboradores.
+    -   Wikis del proyecto: Crea documentación y notas compartidas para tu proyecto.
+
+## Flujo básico de trabajo en GitHub:
+
+1.  Clonar un repositorio: Descarga una copia del proyecto de GitHub a tu computadora.
+2.  Crear una rama: Crea una nueva rama para trabajar en tu propio conjunto de cambios.
+3.  Realizar cambios: Edita los archivos del proyecto y haz cambios localmente.
+4.  Confirmar cambios: Guarda los cambios en tu repositorio local con un mensaje descriptivo.
+5.  Subir cambios: Sube tus cambios al repositorio remoto en GitHub.
+6.  Enviar una solicitud de extracción (Pull request): Propón tus cambios para que sean revisados y fusionados en la rama principal del proyecto.
+
+Comandos básicos en Git:
+
+-   `git init`: Crea un nuevo repositorio Git en la carpeta actual.
+-   `git clone`: Descarga un repositorio remoto a tu computadora.
+-   `git add`: Agrega archivos al índice de Git para ser confirmados.
+-   `git commit`: Guarda los cambios en el índice como un nuevo commit.
+-   `git push`: Sube tus cambios al repositorio remoto.
+-   `git pull`: Descarga los cambios del repositorio remoto y fusiona con tu rama local.
+
+# Git Pages 
+
+Git Pages es una funcionalidad que ofrece GitHub para hospedar tu sitio web directamente desde tu repositorio de GitHub una referencia en español: una referencia en español sobre Git Pages. Proporciona una manera gratuita y fácil de publicar sitios web estáticos.
+
+Aquí algunos puntos clave sobre Git Pages:
+
+-   **Sitios web estáticos:** Solo puede alojar sitios web estáticos, lo que significa que el contenido de tu sitio web está preconstruido con archivos HTML, CSS y JavaScript.
+-   **Flujo de trabajo simple:** Los cambios que realices en los archivos de tu sitio web se reflejan en vivo en tu sitio una vez que los subas a tu repositorio de GitHub. Esto facilita mucho la implementación de actualizaciones en tu sitio web.
+-   **Gratuito:** Git Pages es completamente gratuito para repositorios públicos. También hay planes pagos para repositorios privados.
+-   **Personalización:** Puedes personalizar la apariencia de tu sitio web usando temas o creando tu propio HTML y CSS.
