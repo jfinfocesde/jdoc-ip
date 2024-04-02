@@ -1,0 +1,684 @@
+# CSS
+
+CSS, o Cascading Style Sheets, es un lenguaje de diseño gráfico para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado, como HTML o XML. CSS se utiliza para dar estilo a las páginas web, por ejemplo, alterando la fuente, color, tamaño y espaciado del contenido, dividiendo el contenido en múltiples columnas o agregando animaciones y otras características decorativas.
+
+CSS es un lenguaje de hojas de estilo que se utiliza para describir cómo se mostrará un documento HTML. CSS se aplica a un documento HTML en forma de hojas de estilo. Una hoja de estilo CSS es un archivo de texto que contiene instrucciones sobre cómo se debe mostrar un documento HTML.
+
+CSS es un lenguaje poderoso que se puede utilizar para crear diseños web muy complejos y sofisticados. Con un buen conocimiento de CSS, puede crear páginas web que sean atractivas, informativas y fáciles de usar.
+
+## Funciones de CSS
+
+CSS tiene una serie de funciones, entre las que se incluyen:
+
+- Controlar el aspecto de los elementos HTML: CSS se puede utilizar para cambiar el aspecto de los elementos HTML, como su color, tamaño, fuente y posición.
+- Crear layouts: CSS se puede utilizar para crear layouts de páginas web, como columnas, filas y tablas.
+- Agregar efectos: CSS se puede utilizar para agregar efectos a las páginas web, como animaciones, transiciones y sombras.
+- Soportar dispositivos móviles: CSS se puede utilizar para crear páginas web que se vean bien en dispositivos móviles.
+
+## Sintaxis de CSS
+
+La sintaxis de CSS es relativamente simple. Las reglas CSS se componen de dos partes: una selector y una declaración.
+
+El selector identifica los elementos HTML a los que se aplicará la regla. El declaración especifica el estilo que se aplicará a los elementos seleccionados.
+
+Por ejemplo, la siguiente regla CSS cambiará el color de todos los elementos `<h1>` a rojo:
+
+```css  
+h1 {
+  color: red;
+}
+```
+
+En este caso, el selector es h1 y la declaración es color: red.
+
+CSS vs. HTML
+
+HTML y CSS son dos lenguajes diferentes que se utilizan para crear páginas web. HTML es un lenguaje de marcado que se utiliza para estructurar el contenido de una página web. CSS es un lenguaje de diseño gráfico que se utiliza para dar estilo a la página web.
+
+HTML y CSS trabajan juntos para crear páginas web. HTML proporciona la estructura y el contenido de la página web, mientras que CSS proporciona el estilo.
+
+# Uso de CSS
+
+CSS se puede usar de varias maneras. Puede agregar CSS a su documento HTML de forma inline, interna o externa.
+
+## CSS inline
+
+CSS inline es un tipo de CSS que se aplica a un elemento HTML individual. Se utiliza agregando el atributo style al elemento HTML. El atributo style contiene una lista de propiedades CSS y sus valores.
+
+Por ejemplo, el siguiente código aplica CSS inline a un elemento `<h1>`:
+
+```html  
+<h1 style="color: red;">Este es un título</h1>
+```
+
+En este caso, el CSS inline cambiará el color del elemento `<h1>` a rojo.
+
+CSS inline es útil para aplicar estilos únicos a elementos HTML individuales. Sin embargo, no se recomienda usar CSS inline para aplicar estilos a todos los elementos de un tipo determinado. En su lugar, se recomienda usar CSS interno o CSS externo para aplicar estilos globales.
+
+Aquí hay algunos ejemplos de cómo usar CSS inline:
+
+Para aplicar un color de fondo a un párrafo:
+
+```html  
+<p style="background-color: blue;">Este es un párrafo</p>
+```
+
+Para aplicar un estilo de borde a una imagen:
+
+```html  
+<img src="mi-imagen.jpg" style="border: 1px solid black;">
+```
+
+Para aplicar un efecto de sombra a un encabezado:
+
+```html  
+<h1 style="box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);">Este es un encabezado</h1>
+```
+
+## CSS interno
+
+El CSS interno se agrega directamente al documento HTML. El CSS interno se coloca entre las etiquetas `<style>` y `</style>`.
+
+Por ejemplo, el siguiente código agrega CSS interno a un documento HTML:
+
+
+```html  
+<html>
+  <head>
+    <title>Mi página web</title>
+    <style>
+      h1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Este es un título</h1>
+  </body>
+</html>
+```
+
+En este caso, el CSS interno cambia el color de todos los elementos `<h1>` a rojo.
+
+## CSS externo
+
+El CSS externo se almacena en un archivo separado del documento HTML. El archivo de CSS se vincula al documento HTML mediante la etiqueta `<link>`.
+
+Por ejemplo, el siguiente código vincula un archivo de CSS externo a un documento HTML:
+
+```html  
+<html>
+  <head>
+    <title>Mi página web</title>
+    <link rel="stylesheet" href="mi-estilo.css">
+  </head>
+  <body>
+    <h1>Este es un título</h1>
+  </body>
+</html>
+```
+
+En este caso, el archivo de CSS externo mi-estilo.css se vincula al documento HTML. El CSS externo cambiará el color de todos los elementos `<h1>` a rojo.
+
+# Selectores CSS
+
+Los selectores CSS son patrones que se utilizan para seleccionar los elementos HTML a los que se desea aplicar un estilo. Hay muchos tipos diferentes de selectores CSS, cada uno con su propia sintaxis y utilidad.
+
+## Selectores de etiqueta
+
+Los selectores de etiqueta se utilizan para seleccionar todos los elementos de un tipo determinado. La sintaxis es simplemente el nombre de la etiqueta HTML. Por ejemplo, el siguiente selector seleccionaría todos los elementos `<h1>`:
+
+```css  
+h1 {
+  color: red;
+}
+```
+
+Este selector aplicaría el estilo color: red a todos los elementos `<h1>` de la página web.
+
+Ejemplo HTML:
+
+```html  
+<html>
+<head>
+  <title>Mi página web</title>
+  <style>
+    h1 {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Este es un título</h1>
+  <p>Este es un párrafo</p>
+</body>
+</html>
+```
+
+## Selectores de identificación
+
+Los selectores de identificación se utilizan para seleccionar elementos HTML en función de su identificador. Los identificadores son atributos HTML que se utilizan para identificar elementos específicos. La sintaxis de un selector de identificación es el símbolo de hash (#) seguido del identificador del elemento.
+
+Ejemplos
+
+El siguiente selector seleccionaría el elemento con el identificador mi-id:
+
+```css  
+#mi-id {
+  color: red;
+}
+```
+Los selectores de identificación son muy útiles para seleccionar elementos específicos. Se pueden utilizar para aplicar estilos a elementos individuales o a grupos de elementos.
+
+Ejemplo HTML
+
+```html  
+<html>
+<head>
+  <title>Mi página web</title>
+  <style>
+    #mi-id {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="mi-id">Este es un título</h1>
+  <p>Este es un párrafo</p>
+</body>
+</html>
+```
+
+## Selectores de clase
+
+Los selectores de clase se utilizan para seleccionar todos los elementos que tienen una clase específica. La sintaxis es el punto (.) seguido del nombre de la clase. Por ejemplo, el siguiente selector seleccionaría todos los elementos que tengan la clase mi-clase:
+
+```css  
+#mi-id {
+  color: red;
+}
+```
+
+Este selector aplicaría el estilo font-size: 20px a todos los elementos que tengan la clase mi-clase de la página web.
+
+```html  
+<html>
+<head>
+  <title>Mi página web</title>
+  <style>
+    .mi-clase {
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="mi-clase">Este es un título</h1>
+  <p class="mi-clase">Este es un párrafo</p>
+</body>
+</html>
+```
+
+## Selectores de jerarquía
+
+Los selectores de jerarquía se utilizan para seleccionar elementos HTML en función de su relación con otros elementos. Hay dos tipos de selectores de jerarquía:
+
+- Selectores descendientes: Seleccionan todos los elementos que son descendientes de un elemento específico.
+- Selectores hermanos: Seleccionan todos los elementos que son hermanos de un elemento específico.
+
+## Selectores descendientes
+
+Los selectores descendientes se utilizan para seleccionar todos los elementos que están dentro de un elemento específico. La sintaxis de un selector descendiente es el nombre de la etiqueta seguido de un espacio y el nombre de la etiqueta del elemento descendiente.
+
+Ejemplos
+
+El siguiente selector seleccionaría todos los elementos `<p>` que están dentro de un elemento `<div>`:
+
+```css  
+div p {
+  color: red;
+}
+```
+
+Este selector aplicaría el estilo color: red a todos los elementos `<p>` que están dentro de un elemento `<div>`.
+
+Explicación
+
+Los selectores descendientes son muy útiles para aplicar estilos a grupos de elementos. Se pueden utilizar para aplicar estilos a todos los elementos de un tipo dentro de otro elemento.
+
+Ejemplo HTML
+
+```html  
+<html>
+<head>
+  <title>Mi página web</title>
+  <style>
+    div p {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p>Este es un párrafo</p>
+    <p>Este es otro párrafo</p>
+  </div>
+</body>
+</html>
+```
+
+En este ejemplo, el selector div p seleccionaría los dos elementos `<p>` que están dentro del elemento `<div>`.
+
+## Combinación con otros selectores
+
+Los selectores descendientes se pueden combinar con otros selectores para crear reglas CSS más complejas. Por ejemplo, el siguiente selector seleccionaría todos los elementos `<p>` que están dentro de un elemento `<div>` con el identificador mi-div:
+
+```css  
+div#mi-div p {
+  color: red;
+}
+```
+Este selector aplicaría el estilo color: red a todos los elementos `<p>` que están dentro del elemento `<div>` con el identificador mi-div.
+
+## Selectores hermanos
+
+Los selectores hermanos se utilizan para seleccionar todos los elementos que están al mismo nivel que un elemento específico. La sintaxis de un selector hermano es el nombre de la etiqueta seguido de un espacio y el nombre de la etiqueta del elemento hermano.
+
+Ejemplos
+
+El siguiente selector seleccionaría todos los elementos `<p>` que son hermanos de un elemento `<h1>`:
+
+```css  
+h1 + p {
+  color: red;
+}
+```
+
+Este selector aplicaría el estilo color: red a todos los elementos `<p>` que son hermanos de un elemento `<h1>`.
+
+Explicación
+
+Los selectores hermanos son muy útiles para aplicar estilos a grupos de elementos que están relacionados entre sí. Se pueden utilizar para aplicar estilos a todos los elementos de un tipo que son hermanos de otro elemento.
+
+Ejemplo HTML
+
+```html  
+<html>
+<head>
+  <title>Mi página web</title>
+  <style>
+    h1 + p {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Este es un título</h1>
+  <p>Este es un párrafo</p>
+  <p>Este es otro párrafo</p>
+</body>
+</html>
+```
+
+En este ejemplo, el selector h1 + p seleccionaría los dos elementos `<p>` que son hermanos del elemento `<h1>`.
+
+Combinación con otros selectores
+
+Los selectores hermanos se pueden combinar con otros selectores para crear reglas CSS más complejas. Por ejemplo, el siguiente selector seleccionaría todos los elementos `<p>` que son hermanos de un elemento `<h1>` con el identificador mi-h1:
+
+```css  
+h1#mi-h1 + p {
+  color: red;
+}
+```
+
+Este selector aplicaría el estilo color: red a todos los elementos `<p>` que son hermanos del elemento `<h1>` con el identificador mi-h1.
+
+Ejemplo HTML
+
+```html  
+<html>
+<head>
+  <title>Mi página web</title>
+  <style>
+    #mi-id + p.mi-clase {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="mi-id">Este es un título</h1>
+  <p class="mi-clase">Este es un párrafo</p>
+  <p class="mi-clase">Este es otro párrafo</p>
+</body>
+</html>
+```
+
+En este ejemplo, el selector #mi-id + p.mi-clase seleccionaría todos los elementos `<p>` que son hermanos del elemento `<h1>` con el identificador mi-id y que tienen la clase mi-clase. En este caso, el selector seleccionaría el segundo elemento `<p>`.
+
+## operadores de CSS:
+
+## Operador +
+
+El operador + se utiliza para seleccionar elementos que son hermanos inmediatos. Esto significa que los elementos seleccionados deben estar uno al lado del otro sin ningún otro elemento intermedio.
+
+Ejemplo:
+
+```html  
+<html>
+<head>
+  <title>Mi página web</title>
+  <style>
+    #mi-id + p {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="mi-id">Este es un título</h1>
+  <p>Este es un párrafo</p>
+  <p class="mi-clase">Este es otro párrafo</p>
+</body>
+</html>
+```
+
+En este ejemplo, el selector #mi-id + p seleccionaría el segundo elemento `<p>`. Esto se debe a que el elemento `<p>` con la clase mi-clase es el único elemento `<p>` que es hermano inmediato del elemento `<h1>` con el identificador mi-id.
+
+## Operador`>`
+
+El operador > se utiliza para seleccionar elementos que son descendientes. Esto significa que los elementos seleccionados deben estar dentro del elemento especificado.
+
+Ejemplo:
+
+```html  
+<html>
+<head>
+  <title>Mi página web</title>
+  <style>
+    div > p {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p>Este es un párrafo</p>
+    <p class="mi-clase">Este es otro párrafo</p>
+  </div>
+</body>
+</html>
+```
+
+En este ejemplo, el selector div > p seleccionaría los dos elementos `<p>`. Esto se debe a que ambos elementos `<p>` son descendientes del elemento `<div>`.
+
+## Operador ~
+
+El operador ~ se utiliza para seleccionar elementos que son hermanos con cualquier número de elementos intermedios. Esto significa que los elementos seleccionados pueden estar separados por cualquier número de elementos, incluidos otros elementos de la misma etiqueta.
+
+Ejemplo:
+
+```html  
+<html>
+<head>
+  <title>Mi página web</title>
+  <style>
+    div ~ p {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p>Este es un párrafo</p>
+    <img src="imagen.png" alt="Imagen">
+    <p class="mi-clase">Este es otro párrafo</p>
+  </div>
+</body>
+</html>
+```
+
+En este ejemplo, el selector div ~ p seleccionaría el segundo elemento `<p>`. Esto se debe a que el elemento `<p>` con la clase mi-clase es un hermano del elemento `<div>`, aunque hay un elemento `<img>` intermedio.
+
+# Principales atributos CSS y ejemplos:
+
+## **Tipografía:**
+
+-   **`font-family`:** Define la familia tipográfica. Ejemplo: `font-family: Arial, sans-serif;`
+-   **`font-size`:** Define el tamaño de la fuente. Ejemplo: `font-size: 16px;`
+-   **`color`:** Define el color del texto. Ejemplo: `color: #FF0000;`
+-   **`text-align`:** Define la alineación del texto. Ejemplo: `text-align: center;`
+-   **`line-height`:** Define la altura de línea. Ejemplo: `line-height: 1.5;`
+
+## **Diseño:**
+
+-   **`width`:** Define el ancho del elemento. Ejemplo: `width: 50%;`
+-   **`height`:** Define la altura del elemento. Ejemplo: `height: 100px;`
+-   **`margin`:** Define el margen del elemento. Ejemplo: `margin: 10px;`
+-   **`padding`:** Define el relleno del elemento. Ejemplo: `padding: 20px;`
+-   **`border`:** Define el borde del elemento. Ejemplo: `border: 1px solid #000000;`
+## **Posicionamiento:**
+
+-   **`position`:** Define la posición del elemento. Ejemplo: `position: absolute;`
+-   **`top`:** Define la posición superior del elemento. Ejemplo: `top: 10px;`
+-   **`right`:** Define la posición derecha del elemento. Ejemplo: `right: 10px;`
+-   **`bottom`:** Define la posición inferior del elemento. Ejemplo: `bottom: 10px;`
+-   **`left`:** Define la posición izquierda del elemento. Ejemplo: `left: 10px;`
+## **Fondos:**
+
+-   **`background-color`:** Define el color de fondo del elemento. Ejemplo: `background-color: #ffffff;`
+-   **`background-image`:** Define la imagen de fondo del elemento. Ejemplo: `background-image: url(imagen.jpg);`
+-   **`background-repeat`:** Define cómo se repite la imagen de fondo. Ejemplo: `background-repeat: no-repeat;`
+-   **`background-position`:** Define la posición de la imagen de fondo. Ejemplo: `background-position: center center;`
+## **Otros:**
+
+-   **`display`:** Define cómo se muestra el elemento. Ejemplo: `display: none;`
+-   **`visibility`:** Define si el elemento es visible o no. Ejemplo: `visibility: hidden;`
+-   **`opacity`:** Define la opacidad del elemento. Ejemplo: `opacity: 0.5;`
+-   **`z-index`:** Define el orden de apilamiento del elemento. Ejemplo: `z-index: 1;`
+
+
+# **Ejemplos:**
+
+##   **Encabezado con una fuente grande y roja:**
+
+HTML
+
+```html
+<h1>Título</h1>
+```
+
+CSS
+
+```css
+h1 {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  color: #FF0000;
+  text-align: center;
+}
+```
+
+##   **Caja con un borde azul y un margen de 10px:**
+
+HTML
+
+```html
+<div>
+  Este es un texto dentro de una caja.
+</div>
+```
+
+CSS
+
+```css
+div {
+  border: 1px solid #0000FF;
+  margin: 10px;
+  padding: 20px;
+}
+```
+
+##   **Imagen de fondo que se repite en mosaico:**
+
+HTML
+
+```html
+<body>
+  <img src="imagen.jpg" alt="Imagen de fondo">
+</body>
+```
+
+CSS
+
+```css
+body {
+  background-image: url(imagen.jpg);
+  background-repeat: repeat;
+}
+```
+
+# Ejemplos de CSS completos
+
+## **1\. Página web con diseño sencillo:**
+
+HTML
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página web sencilla</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Título de la página</h1>
+  <p>Este es un párrafo de texto.</p>
+  <p>Otro párrafo de texto.</p>
+</body>
+</html>
+```
+
+CSS
+
+```css
+/* Estilo general del cuerpo */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333333;
+  margin: 20px;
+}
+
+/* Estilo del título */
+h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 0;
+}
+
+/* Estilo de los párrafos */
+p {
+  line-height: 1.5;
+  text-align: justify;
+}
+```
+
+### **Explicación:**
+
+-   El archivo HTML define la estructura de la página web con títulos, párrafos y otros elementos.
+-   El archivo CSS define los estilos para cada elemento HTML.
+-   En este ejemplo, se define un estilo general para el cuerpo de la página web, incluyendo la fuente, el tamaño de la fuente, el color y el margen.
+-   También se define un estilo específico para el título y los párrafos.
+-   El resultado es una página web simple con una tipografía legible y un diseño limpio.
+
+## **2\. Formulario de contacto con estilo:**
+
+HTML
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de contacto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Formulario de contacto</h1>
+  <form action="#">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+    <br>
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required>
+    <br>
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+    <br>
+    <button type="submit">Enviar mensaje</button>
+  </form>
+</body>
+</html>
+```
+
+CSS
+
+```css
+/* Estilo general del cuerpo */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333333;
+  margin: 20px;
+}
+
+/* Estilo del título */
+h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 0;
+}
+
+/* Estilo del formulario */
+form {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+/* Estilo de las etiquetas */
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Estilo de los campos de entrada */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilo del botón */
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+```
+
+
+### **Explicación:**
+
+-   Este ejemplo muestra un formulario de contacto con un diseño más complejo.
+-   Se define un estilo para el formulario en sí, incluyendo el ancho, el margen, el relleno y el borde.
+-   Se define un estilo para el botón de envío, incluyendo el margen, el relleno, el borde, el color de fondo y el color del texto.
+-   El resultado es un formulario de contacto con un diseño atractivo y fácil de usar.
+
