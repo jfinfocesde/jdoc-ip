@@ -194,7 +194,7 @@ Ejemplo HTML
 Los selectores de clase se utilizan para seleccionar todos los elementos que tienen una clase específica. La sintaxis es el punto (.) seguido del nombre de la clase. Por ejemplo, el siguiente selector seleccionaría todos los elementos que tengan la clase mi-clase:
 
 ```css  
-#mi-id {
+.mi-clase {
   color: red;
 }
 ```
@@ -225,218 +225,63 @@ Los selectores de jerarquía se utilizan para seleccionar elementos HTML en func
 - Selectores descendientes: Seleccionan todos los elementos que son descendientes de un elemento específico.
 - Selectores hermanos: Seleccionan todos los elementos que son hermanos de un elemento específico.
 
-## Selectores descendientes
+### **1\. Selector de descendientes:**
 
-Los selectores descendientes se utilizan para seleccionar todos los elementos que están dentro de un elemento específico. La sintaxis de un selector descendiente es el nombre de la etiqueta seguido de un espacio y el nombre de la etiqueta del elemento descendiente.
+```html
+<div>
+  <h1>Título</h1>
+  <p>Este párrafo es hijo del div.</p>
+  <p>Este párrafo también es hijo del div.</p>
+</div>
+```
 
-Ejemplos
-
-El siguiente selector seleccionaría todos los elementos `<p>` que están dentro de un elemento `<div>`:
-
-```css  
-div p {
+```css
+div > p {
   color: red;
 }
 ```
 
-Este selector aplicaría el estilo color: red a todos los elementos `<p>` que están dentro de un elemento `<div>`.
+#### **Resultado:**
 
-Explicación
+Los dos párrafos dentro del `div` se mostrarán en color rojo.
 
-Los selectores descendientes son muy útiles para aplicar estilos a grupos de elementos. Se pueden utilizar para aplicar estilos a todos los elementos de un tipo dentro de otro elemento.
+### **2\. Selector de hijos:**
 
-Ejemplo HTML
-
-```html  
-<html>
-<head>
-  <title>Mi página web</title>
-  <style>
-    div p {
-      color: red;
-    }
-  </style>
-</head>
-<body>
-  <div>
-    <p>Este es un párrafo</p>
-    <p>Este es otro párrafo</p>
-  </div>
-</body>
-</html>
+```html
+<div>
+  <h1>Título</h1>
+  <p>Este párrafo es hijo inmediato del div.</p>
+  <p>Este párrafo no es hijo inmediato del div.</p>
+</div>
 ```
 
-En este ejemplo, el selector div p seleccionaría los dos elementos `<p>` que están dentro del elemento `<div>`.
-
-## Combinación con otros selectores
-
-Los selectores descendientes se pueden combinar con otros selectores para crear reglas CSS más complejas. Por ejemplo, el siguiente selector seleccionaría todos los elementos `<p>` que están dentro de un elemento `<div>` con el identificador mi-div:
-
-```css  
-div#mi-div p {
-  color: red;
+```css
+div + p {
+  color: blue;
 }
 ```
-Este selector aplicaría el estilo color: red a todos los elementos `<p>` que están dentro del elemento `<div>` con el identificador mi-div.
+#### **Resultado:**
 
-## Selectores hermanos
+Solo el primer párrafo dentro del `div` se mostrará en color azul.
 
-Los selectores hermanos se utilizan para seleccionar todos los elementos que están al mismo nivel que un elemento específico. La sintaxis de un selector hermano es el nombre de la etiqueta seguido de un espacio y el nombre de la etiqueta del elemento hermano.
+### **3\. Selector de hermanos adyacentes:**
 
-Ejemplos
+```html
+<h1>Título</h1>
+<p>Este párrafo es hermano adyacente del h1.</p>
+<p>Este párrafo no es hermano adyacente del h1.</p>
+```
 
-El siguiente selector seleccionaría todos los elementos `<p>` que son hermanos de un elemento `<h1>`:
-
-```css  
-h1 + p {
-  color: red;
+```css
+h1 ~ p {
+  color: green;
 }
 ```
 
-Este selector aplicaría el estilo color: red a todos los elementos `<p>` que son hermanos de un elemento `<h1>`.
+#### **Resultado:**
 
-Explicación
+Solo el primer párrafo, que es hermano adyacente del `h1`
 
-Los selectores hermanos son muy útiles para aplicar estilos a grupos de elementos que están relacionados entre sí. Se pueden utilizar para aplicar estilos a todos los elementos de un tipo que son hermanos de otro elemento.
-
-Ejemplo HTML
-
-```html  
-<html>
-<head>
-  <title>Mi página web</title>
-  <style>
-    h1 + p {
-      color: red;
-    }
-  </style>
-</head>
-<body>
-  <h1>Este es un título</h1>
-  <p>Este es un párrafo</p>
-  <p>Este es otro párrafo</p>
-</body>
-</html>
-```
-
-En este ejemplo, el selector h1 + p seleccionaría los dos elementos `<p>` que son hermanos del elemento `<h1>`.
-
-Combinación con otros selectores
-
-Los selectores hermanos se pueden combinar con otros selectores para crear reglas CSS más complejas. Por ejemplo, el siguiente selector seleccionaría todos los elementos `<p>` que son hermanos de un elemento `<h1>` con el identificador mi-h1:
-
-```css  
-h1#mi-h1 + p {
-  color: red;
-}
-```
-
-Este selector aplicaría el estilo color: red a todos los elementos `<p>` que son hermanos del elemento `<h1>` con el identificador mi-h1.
-
-Ejemplo HTML
-
-```html  
-<html>
-<head>
-  <title>Mi página web</title>
-  <style>
-    #mi-id + p.mi-clase {
-      color: red;
-    }
-  </style>
-</head>
-<body>
-  <h1 id="mi-id">Este es un título</h1>
-  <p class="mi-clase">Este es un párrafo</p>
-  <p class="mi-clase">Este es otro párrafo</p>
-</body>
-</html>
-```
-
-En este ejemplo, el selector #mi-id + p.mi-clase seleccionaría todos los elementos `<p>` que son hermanos del elemento `<h1>` con el identificador mi-id y que tienen la clase mi-clase. En este caso, el selector seleccionaría el segundo elemento `<p>`.
-
-## operadores de CSS:
-
-## Operador +
-
-El operador + se utiliza para seleccionar elementos que son hermanos inmediatos. Esto significa que los elementos seleccionados deben estar uno al lado del otro sin ningún otro elemento intermedio.
-
-Ejemplo:
-
-```html  
-<html>
-<head>
-  <title>Mi página web</title>
-  <style>
-    #mi-id + p {
-      color: red;
-    }
-  </style>
-</head>
-<body>
-  <h1 id="mi-id">Este es un título</h1>
-  <p>Este es un párrafo</p>
-  <p class="mi-clase">Este es otro párrafo</p>
-</body>
-</html>
-```
-
-En este ejemplo, el selector #mi-id + p seleccionaría el segundo elemento `<p>`. Esto se debe a que el elemento `<p>` con la clase mi-clase es el único elemento `<p>` que es hermano inmediato del elemento `<h1>` con el identificador mi-id.
-
-## Operador`>`
-
-El operador > se utiliza para seleccionar elementos que son descendientes. Esto significa que los elementos seleccionados deben estar dentro del elemento especificado.
-
-Ejemplo:
-
-```html  
-<html>
-<head>
-  <title>Mi página web</title>
-  <style>
-    div > p {
-      color: red;
-    }
-  </style>
-</head>
-<body>
-  <div>
-    <p>Este es un párrafo</p>
-    <p class="mi-clase">Este es otro párrafo</p>
-  </div>
-</body>
-</html>
-```
-
-En este ejemplo, el selector div > p seleccionaría los dos elementos `<p>`. Esto se debe a que ambos elementos `<p>` son descendientes del elemento `<div>`.
-
-## Operador ~
-
-El operador ~ se utiliza para seleccionar elementos que son hermanos con cualquier número de elementos intermedios. Esto significa que los elementos seleccionados pueden estar separados por cualquier número de elementos, incluidos otros elementos de la misma etiqueta.
-
-Ejemplo:
-
-```html  
-<html>
-<head>
-  <title>Mi página web</title>
-  <style>
-    div ~ p {
-      color: red;
-    }
-  </style>
-</head>
-<body>
-  <div>
-    <p>Este es un párrafo</p>
-    <img src="imagen.png" alt="Imagen">
-    <p class="mi-clase">Este es otro párrafo</p>
-  </div>
-</body>
-</html>
-```
-
-En este ejemplo, el selector div ~ p seleccionaría el segundo elemento `<p>`. Esto se debe a que el elemento `<p>` con la clase mi-clase es un hermano del elemento `<div>`, aunque hay un elemento `<img>` intermedio.
 
 # Principales atributos CSS y ejemplos:
 
@@ -682,3 +527,44 @@ button {
 -   Se define un estilo para el botón de envío, incluyendo el margen, el relleno, el borde, el color de fondo y el color del texto.
 -   El resultado es un formulario de contacto con un diseño atractivo y fácil de usar.
 
+
+# Colores en CSS:
+
+En CSS, los colores se pueden definir de varias maneras:
+
+## **1\. Palabras clave:**
+
+-   Puedes usar nombres de colores predefinidos como `red`, `green`, `blue`, `yellow`, etc.
+-   Son fáciles de recordar y usar, pero no siempre ofrecen la precisión que se necesita.
+
+## **2\. Valores RGB:**
+
+-   Se definen como un conjunto de tres números que representan la intensidad de los colores primarios rojo, verde y azul (entre 0 y 255).
+-   Permiten un control preciso sobre el color, pero pueden ser difíciles de leer y escribir.
+###  **Ejemplo:**
+
+
+```css
+color: rgb(255, 0, 0); /* Rojo puro */
+```
+
+## **3\. Valores HEX:**
+
+-   Son una representación hexadecimal del valor RGB, utilizando seis caracteres (entre 0 y F).
+-   Son más compactos que los valores RGB y ofrecen la misma precisión.
+
+### **Ejemplo:**
+
+```css
+color: #FF0000; /* Rojo puro */
+```
+
+## **4\. Valores HSL:**
+
+-   Se basan en el tono (hue), la saturación (saturation) y la luminosidad (lightness) del color.
+-   Son más intuitivos para algunos usuarios y pueden ser más fáciles de ajustar.
+### **Ejemplo:**
+
+```css
+color: hsl(0, 100%, 50%); /* Rojo puro */
+```
