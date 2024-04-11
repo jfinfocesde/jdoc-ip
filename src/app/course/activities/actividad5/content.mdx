@@ -1,0 +1,217 @@
+import { Table } from "antd";
+
+# Actividad 5: **Video tutorial en grupo sobre un ejercicio de Tailwind CSS** (15 minutos minimo)
+
+## **Objetivo:**
+
+Crear un video tutorial que explique en detalle un ejercicio asignado por el docente, utilizando las clases de Tailwind CSS.
+
+## **Metodología y evaluación**
+
+
+<Table dataSource={
+    [
+        {
+            key: '1',
+            Criterio: 'Organización',
+            Descripción: (
+                <ul>
+                    <li>Conformación de grupos de trabajo.</li>
+                    <li>Apropiación del ejercicio asignado por el docente.</li>
+                    <li>Distribución de roles y responsabilidades (investigación, guion, grabación, etc).</li>
+                </ul>
+            ),
+            Puntaje: '20%',
+        },
+        {
+            key: '2',
+            Criterio: 'Investigación',
+            Descripción: (
+                <ul>                                        
+                    <li>Explicación de al menos 5 clases de Tailwind utilizadas en el ejercicio.</li>
+                    <li>Explicación del ejercicio asignado por el docente.</li>                   
+                    <li>Guion con información recopilada.</li>
+                </ul>
+            ),
+            Puntaje: '30%',
+        },
+        {
+            key: '3',
+            Criterio: 'Grabación',
+            Descripción: (
+                <ul>
+                    <li>Elección de un entorno adecuado para la grabación.</li>
+                    <li>Uso de herramientas de grabación de video y audio.</li>
+                    <li>Presentación clara y concisa.</li>  
+                    <li>Edición del video para mejorar calidad de imagen y audio.</li>
+                    <li>Inclusión de elementos visuales (gráficos, animaciones, transiciones).</li>                  
+                </ul>
+            ),
+            Puntaje: '30%',
+        },        
+        {
+            key: '5',
+            Criterio: 'Difusión',
+            Descripción: (
+                <ul>
+                    <li>Compartir el video con docente y compañeros.</li>
+                    <li>Utilizar plataformas adecuadas para la difusión. (youtube, vismeo, etc)</li>
+                </ul>
+            ),
+            Puntaje: '20%',
+        },
+    ]
+
+} columns={
+    [
+        {
+            title: 'Criterio',
+            dataIndex: 'Criterio',
+            key: 'Criterio',
+        },
+        {
+            title: 'Descripción',
+            dataIndex: 'Descripción',
+            key: 'Descripción',
+        },
+        {
+            title: 'Puntaje',
+            dataIndex: 'Puntaje',
+            key: 'Puntaje',
+        },
+    ]
+} pagination={false} />
+
+
+
+    
+
+## Ejercicios
+
+## 1. Tarjeta de producto 
+
+```html
+<div class="flex flex-col w-full max-w-sm mx-auto rounded-lg shadow-md">
+  <img class="rounded-t-lg h-48 object-cover" src="https://picsum.photos/200/300" alt="Imagen del producto">
+  <div class="p-4">
+    <h2 class="text-lg font-bold text-gray-900">Título del producto</h2>
+    <p class="text-sm text-gray-700">Descripción del producto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div class="flex flex-row justify-between items-center">
+      <p class="text-lg font-bold text-green-500">Precio: $100</p>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">Comprar</button>
+    </div>
+  </div>
+</div>
+```
+
+## 2. Barras de navegación
+
+```html
+<!--Barra de navegación 1-->
+<nav class="bg-gray-800 flex flex-row justify-between items-center p-4">
+  <a href="/" class="text-white font-bold text-lg">Mi sitio web</a>
+  <ul class="hidden sm:flex flex-row gap-4">
+    <li><a href="/about" class="text-white hover:text-gray-400">Acerca de</a></li>
+    <li><a href="/contact" class="text-white hover:text-gray-400">Contacto</a></li>
+  </ul>
+  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md sm:hidden">Menú</button>
+</nav>
+
+<!--Barra de navegación 2-->
+<div class="bg-white shadow-lg flex flex-row justify-between items-center p-4">
+  <div class="flex items-center">
+    <img class="w-12 h-12 rounded-full" src="https://picsum.photos/200/300" alt="Imagen de perfil">
+    <h2 class="text-lg font-bold text-gray-800 ml-2">Nombre de usuario</h2>
+  </div>
+  <ul class="flex flex-row gap-4">
+    <li class="text-gray-600 hover:text-gray-800">
+      <a href="/home">Inicio</a>
+    </li>
+    <li class="text-gray-600 hover:text-gray-800">
+      <a href="/about">Acerca de</a>
+    </li>
+    <li class="text-gray-600 hover:text-gray-800">
+      <a href="/contact">Contacto</a>
+    </li>
+  </ul>
+  <div class="flex items-center">
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md focus:outline-none">
+      Cerrar sesión
+    </button>
+  </div>
+</div>
+```
+
+## 3. Footer
+
+```html
+<footer class="bg-gray-800 text-white py-4">
+  <div class="container mx-auto flex flex-row justify-between items-center px-4">
+    <div class="text-sm">
+      &copy; 2023 - Mi sitio web
+    </div>
+    <ul class="flex flex-row gap-4">
+      <li><a href="/privacy" class="hover:text-gray-400">Política de privacidad</a></li>
+      <li><a href="/terms" class="hover:text-gray-400">Términos y condiciones</a></li>
+    </ul>
+  </div>
+</footer>
+```
+
+## 4. Login
+
+```html
+<div class="flex min-h-screen flex-col items-center justify-center bg-gray-100">
+  <div class="w-full rounded-lg bg-white p-8 shadow-md sm:w-1/2 md:w-1/3">
+    <h1 class="text-center text-2xl font-bold">Iniciar sesión</h1>
+    <form action="/login" method="post">
+      <div class="mb-4">
+        <label for="email" class="mb-2 block font-medium">Correo electrónico</label>
+        <input type="email" id="email" name="email" class="w-full rounded-md border border-gray-300 p-2" required />
+      </div>
+      <div class="mb-4">
+        <label for="password" class="mb-2 block font-medium">Contraseña</label>
+        <input type="password" id="password" name="password" class="w-full rounded-md border border-gray-300 p-2" required />
+      </div>
+      <div class="mb-4 flex items-center justify-between">
+        <a href="/forgot-password" class="text-sm text-gray-600 hover:underline">¿Olvidaste tu contraseña?</a>
+        <button type="submit" class="rounded-md bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">Iniciar sesión</button>
+      </div>
+    </form>
+  </div>
+</div>
+```
+
+## 5. Formulario de contacto
+
+```html
+<div class="flex flex-row m-4">
+  <div class="hidden w-1/2 md:block">
+    <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+  </div>
+  <div class="w-full rounded-lg bg-white p-8 shadow-md md:w-1/2">
+    <h1 class="text-center text-2xl font-bold">Formulario de contacto</h1>
+    <form action="/contact" method="post">
+      <div class="mb-4">
+        <label for="name" class="mb-2 block font-medium">Nombre</label>
+        <input type="text" id="name" name="name" class="w-full rounded-md border border-gray-300 p-2" required />
+      </div>
+      <div class="mb-4">
+        <label for="email" class="mb-2 block font-medium">Correo electrónico</label>
+        <input type="email" id="email" name="email" class="w-full rounded-md border border-gray-300 p-2" required />
+      </div>
+      <div class="mb-4">
+        <label for="message" class="mb-2 block font-medium">Mensaje</label>
+        <textarea id="message" name="message" class="w-full rounded-md border border-gray-300 p-2" required></textarea>
+      </div>
+      <div class="mb-4 flex items-center justify-between">
+        <a href="/" class="text-sm text-gray-600 hover:underline">Volver al inicio</a>
+        <button type="submit" class="rounded-md bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700">Enviar mensaje</button>
+      </div>
+    </form>
+  </div>
+</div>
+```
+
+
+

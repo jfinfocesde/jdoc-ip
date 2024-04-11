@@ -11,7 +11,7 @@ interface itemsInfoType {
     submenu: subItemsInfoType[]
 }
 
-export const modedev = false
+export const modedev = true
 
 export const infoCourse = {
     title: "Introducción a la programación",
@@ -138,6 +138,23 @@ export const itemsInfo: itemsInfoType[] = [
             //     label: "Actividad 4",
             //     date: '2024-3-14',
             // },
+        ]
+    },    
+    {
+        href: "",
+        label: "Semana 8",
+        date: '2024-4-11',
+        submenu: [
+            {
+                href: "/course/contents/semana8",
+                label: "Contenido",
+                date: '2024-4-11',
+            },
+            {
+                href: "/course/activities/actividad5",
+                label: "Actividad 5",
+                date: '2024-4-11',
+            },
         ]
     },    
 ]

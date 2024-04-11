@@ -1,0 +1,258 @@
+import { Image } from 'antd';
+
+# Propiedades de espaciado en CSS
+
+ <Image
+    style={{borderRadius:10, width:'60%'}}   
+    preview={false}
+    width={'100%'}
+    src="https://res.cloudinary.com/practicaldev/image/fetch/s--meGOc3z2--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5h8byogi4mzsiuxxe7jw.png"
+  />
+
+En CSS, existen diferentes propiedades para controlar el espaciado en los elementos HTML. Las más importantes son:
+
+**1\. Margin:** Controla el espacio exterior alrededor de un elemento. Se puede establecer para cada lado (arriba, derecha, abajo, izquierda) o de forma global.
+
+**2\. Padding:** Controla el espacio interior entre el borde del elemento y su contenido. También se puede establecer para cada lado o de forma global.
+
+**3\. Border:** Controla el grosor, estilo y color del borde del elemento.
+
+**4\. Border-radius:** Controla el radio de curvatura en las esquinas del borde del elemento.
+
+## Ejemplo de Propiedades de espaciado en CSS
+
+```html
+<div class="contenedor">
+  <h1>Título</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Cras ullamcorper massa sit amet lacus egestas, ac ultrices nisi tincidunt. Nunc accumsan, ipsum sed dignissim feugiat, risus nisl egestas massa, ac tincidunt neque risus eget neque.</p>
+  <p>Suspendisse potenti. Nulla facilisi. Fusce pulvinar libero eu hendrerit laoreet. Fusce aliquam risus sit amet sapien ultrices, eget aliquet risus ultrices. Donec sollicitudin molestie malesuada. Praesent eget neque leo. Maecenas ullamcorper orci sed massa iaculis, ac aliquet neque tincidunt.</p>
+</div>
+```
+
+```css
+.contenedor {
+  margin: 20px auto; /* Margen superior e inferior de 20px y centrado horizontalmente */
+  padding: 10px; /* Padding de 10px en todos los lados */
+  border: 1px solid #ccc; /* Borde de 1px de grosor y color gris claro */
+  border-radius: 5px; /* Radio de curvatura de 5px en las esquinas */
+}
+
+h1 {
+  text-align: center; /* Alineación central del texto del título */
+  margin-top: 0; /* Elimina el margen superior por defecto del título */
+}
+
+p {
+  line-height: 1.5; /* Interlineado de 1.5 para mejorar la legibilidad */
+  margin-bottom: 10px; /* Margen inferior de 10px para separar los párrafos */
+}
+```
+
+### **Explicación:**
+
+-   El contenedor tiene un margen superior e inferior de 20px y está centrado horizontalmente.
+-   El contenedor tiene un padding de 10px en todos los lados, lo que crea un espacio entre el borde del contenedor y su contenido.
+-   El contenedor tiene un borde de 1px de grosor y color gris claro.
+-   El contenedor tiene un radio de curvatura de 5px en las esquinas, lo que suaviza la apariencia del contenedor.
+-   El título está centrado horizontalmente y no tiene margen superior.
+-   Los párrafos tienen un interlineado de 1.5 para mejorar la legibilidad.
+-   Los párrafos tienen un margen inferior de 10px para separar los párrafos.
+
+
+# Unidades de medida en CSS
+
+Las propiedades de espaciado se pueden definir utilizando diferentes unidades de medida. Las más comunes son:
+
+**1\. Píxeles (px):** Es la unidad más básica y representa un punto en la pantalla. Es ideal para elementos con un tamaño fijo, como iconos o imágenes.
+
+**2\. Porcentaje (%):** Es una unidad relativa que se calcula en función del tamaño del elemento padre. Es útil para crear diseños flexibles que se adapten a diferentes tamaños de pantalla.
+
+**3\. Rem (rem):** Es una unidad relativa que se basa en el tamaño de la fuente del elemento raíz. Es ideal para crear diseños con una tipografía consistente.
+
+**4\. Em (em):** Es una unidad relativa que se basa en el tamaño de la fuente del elemento actual. Es útil para crear elementos que se ajusten al tamaño de la fuente del padre.
+
+## Ejemplo de unidades de medida en CSS
+
+```html
+<div class="contenedor">
+  <h1>Título</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Cras ullamcorper massa sit amet lacus egestas, ac ultrices nisi tincidunt. Nunc accumsan, ipsum sed dignissim feugiat, risus nisl egestas massa, ac tincidunt neque risus eget neque.</p>
+  <p>Suspendisse potenti. Nulla facilisi. Fusce pulvinar libero eu hendrerit laoreet. Fusce aliquam risus sit amet sapien ultrices, eget aliquet risus ultrices. Donec sollicitudin molestie malesuada. Praesent eget neque leo. Maecenas ullamcorper orci sed massa iaculis, ac aliquet neque tincidunt.</p>
+</div>
+```
+
+```css
+.contenedor {
+  width: 500px; /* Ancho de 500px */
+  height: 300px; /* Alto de 300px */
+  margin: 20px auto; /* Margen superior e inferior de 20px y centrado horizontalmente */
+  padding: 10px; /* Padding de 10px en todos los lados */
+  border: 1px solid #ccc; /* Borde de 1px de grosor y color gris claro */
+  border-radius: 5px; /* Radio de curvatura de 5px en las esquinas */
+}
+
+h1 {
+  text-align: center; /* Alineación central del texto del título */
+  margin-top: 0; /* Elimina el margen superior por defecto del título */
+  font-size: 1.5em; /* Tamaño de fuente de 1.5em */
+}
+
+p {
+  line-height: 1.5; /* Interlineado de 1.5 para mejorar la legibilidad */
+  margin-bottom: 10px; /* Margen inferior de 10px para separar los párrafos */
+}
+
+.imagen {
+  width: 100%; /* Ancho del 100% del contenedor */
+  height: auto; /* Altura automática para mantener la relación de aspecto de la imagen */
+  margin: 10px auto; /* Margen superior e inferior de 10px y centrado horizontalmente */
+}
+```
+
+### **Explicación:**
+
+-   El contenedor tiene un ancho de 500px y un alto de 300px.
+-   El contenedor tiene un margen superior e inferior de 20px y está centrado horizontalmente.
+-   El contenedor tiene un padding de 10px en todos los lados.
+-   El contenedor tiene un borde de 1px de grosor y color gris claro.
+-   El contenedor tiene un radio de curvatura de 5px en las esquinas.
+-   El título está centrado horizontalmente, no tiene margen superior y tiene un tamaño de fuente de 1.5em.
+-   Los párrafos tienen un interlineado de 1.5 y un margen inferior de 10px.
+-   La imagen tiene un ancho del 100% del contenedor, una altura automática y un margen superior e inferior de 10px.
+
+# Tailwind CSS
+
+Tailwind CSS es un framework CSS de código abierto que se enfoca en la utilidad sobre el estilo. A diferencia de otros frameworks CSS como Bootstrap, Tailwind no proporciona componentes predefinidos con estilos específicos. En cambio, ofrece clases CSS con un propósito específico que puedes combinar para lograr el estilo deseado en tu sitio web.
+
+Por ejemplo, en lugar de tener una clase para un botón completo, Tailwind podría tener clases separadas para el color de fondo, el color del texto, el padding, y el borde del botón. Esto te da más control sobre la apariencia de tu sitio web y te permite crear diseños personalizados.
+
+Algunas de las ventajas de usar Tailwind CSS incluyen:
+
+-   **Mayor control:** Tienes más control sobre la apariencia de tu sitio web que con los frameworks CSS tradicionales.
+-   **Menor código CSS:** Al usar clases de utilidad, puedes escribir menos código CSS.
+-   **Más rápido desarrollo:** Tailwind CSS puede acelerar el desarrollo web porque no tienes que escribir tanto código CSS personalizado.
+-   **Fácil de integrar:** Se integra con frameworks front-end populares como React, Vue.js y Angular.
+
+## Cómo aplicar breakpoints en Tailwind CSS
+
+### **Breakpoints** en Tailwind CSS te permiten adaptar el diseño de tu sitio web a diferentes tamaños de pantalla. Son puntos de inflexión que cambian cómo se aplican los estilos a los elementos.
+
+### **Aspectos básicos:**
+
+-   **Predefinidos:** Tailwind CSS tiene 6 breakpoints predefinidos: `sm`, `md`, `lg`, `xl`, `2xl` y `3xl`. Estos nombres se aproximan a tamaños comunes de dispositivos móviles, tabletas y escritorios.
+-   **Basados en ancho mínimo:** Los breakpoints se basan en el ancho mínimo de la pantalla. Un estilo con la clase `md` se aplica a pantallas con un ancho mínimo de `md` (768px por defecto).
+-   **Mobile-first:** Tailwind CSS prioriza los estilos móviles. Se aplican primero y se anulan para pantallas más grandes.
+-   **Personalización:** Puedes personalizar los breakpoints en la configuración de Tailwind CSS.
+### **Aplicando breakpoints:**
+
+-   **Prefijos de clase:** Para aplicar estilos según el tamaño de la pantalla, usa prefijos de clase especiales antes del nombre de la clase de utilidad.
+-   **Ejemplos:**
+    -   `sm:text-lg`: Aplica `text-lg` solo en pantallas pequeñas.
+    -   `md:flex`: Aplica `flex` solo en pantallas medianas y superiores.
+    -   `lg:hidden`: Oculta el elemento solo en pantallas grandes y superiores.
+### **Ejemplo:**
+
+```html
+<div class="text-lg sm:text-xl md:text-2xl">
+  Título adaptable
+</div>
+```
+
+-   **Explicación:**
+    -   `text-lg`: Tamaño de fuente base.
+    -   `sm:text-xl`: Tamaño `xl` en pantallas pequeñas.
+    -   `md:text-2xl`: Tamaño `2xl` en pantallas medianas y superiores.
+
+
+## Principales clases de Tailwind CSS: Lista completa
+
+### **Animaciones:**
+
+-   `animate-none`: Elimina cualquier animación.
+-   `animate-spin`: Animación de giro.
+-   `animate-ping`: Animación de "ping".
+-   `animate-pulse`: Animación de pulso.
+-   `animate-bounce`: Animación de rebote.
+### **Flexbox:**
+
+-   `flex`: Aplica Flexbox a un elemento.
+-   `flex-row`: Dirección de flexbox en fila.
+-   `flex-col`: Dirección de flexbox en columna.
+-   `flex-wrap`: Permite que los elementos se ajusten a varias líneas.
+-   `justify-center`: Centra los elementos en el eje principal.
+-   `items-center`: Centra los elementos en el eje transversal.
+-   `align-content-center`: Centra los elementos en el eje transversal del contenedor.
+### **Espaciado:**
+
+-   `m-0`: Elimina todos los márgenes.
+-   `mx-auto`: Centra el elemento horizontalmente.
+-   `my-auto`: Centra el elemento verticalmente.
+-   `mt-10`: Margen superior de 10px.
+-   `mb-5`: Margen inferior de 5px.
+-   `ml-2`: Margen izquierdo de 2px.
+-   `mr-3`: Margen derecho de 3px.
+### **Posicionamiento:**
+
+-   `relative`: Posiciona el elemento relativamente a su posición normal.
+-   `absolute`: Posiciona el elemento absolutamente a su contenedor.
+-   `fixed`: Posiciona el elemento fijo a la ventana gráfica.
+-   `top-0`: Posiciona el elemento en la parte superior.
+-   `bottom-0`: Posiciona el elemento en la parte inferior.
+-   `left-0`: Posiciona el elemento en la parte izquierda.
+-   `right-0`: Posiciona el elemento en la parte derecha.
+### **Tipografía:**
+
+-   `text-center`: Centra el texto.
+-   `text-left`: Alinea el texto a la izquierda.
+-   `text-right`: Alinea el texto a la derecha.
+-   `text-lg`: Tamaño de fuente grande.
+-   `text-sm`: Tamaño de fuente pequeño.
+-   `font-bold`: Fuente en negrita.
+-   `font-italic`: Fuente en cursiva.
+### **Colores:**
+
+-   `text-black`: Texto negro.
+-   `text-white`: Texto blanco.
+-   `bg-red-500`: Fondo rojo 500.
+-   `bg-blue-400`: Fondo azul 400.
+-   `border-green-300`: Borde verde 300.
+### **Otras clases:**
+
+-   `rounded-full`: Borde redondo completo.
+-   `shadow-lg`: Sombra grande.
+-   `hidden`: Oculta el elemento.
+-   `visible`: Muestra el elemento.
+
+## Ejemplo de Tailwind CSS explicado:
+
+**Objetivo:** Crear una tarjeta de producto con imagen, título, descripción y precio utilizando Tailwind CSS.
+
+```html
+<div class="flex flex-col w-full max-w-sm mx-auto rounded-lg shadow-md">
+  <img class="rounded-t-lg h-48 object-cover" src="https://picsum.photos/200/300" alt="Imagen del producto">
+  <div class="p-4">
+    <h2 class="text-lg font-bold text-gray-900">Título del producto</h2>
+    <p class="text-sm text-gray-700">Descripción del producto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p class="text-lg font-bold text-green-500">Precio: $100</p>
+  </div>
+</div>
+```
+
+### **Explicación:**
+
+-   `flex flex-col`: Hace que la tarjeta sea un contenedor flexible con una dirección de columna.
+-   `w-full max-w-sm`: Establece el ancho de la tarjeta a `full` y limita su ancho máximo a 480px.
+-   `mx-auto`: Centra la tarjeta horizontalmente en el contenedor.
+-   `rounded-lg`: Aplica un borde redondo a la tarjeta.
+-   `shadow-md`: Agrega una sombra a la tarjeta.
+### **Imagen:**
+
+-   `rounded-t-lg`: Aplica un borde redondo a la parte superior de la imagen.
+-   `h-48`: Establece la altura de la imagen a 48px.
+-   `object-cover`: Ajusta la imagen para que cubra toda la superficie del contenedor manteniendo su relación de aspecto.
+### **Contenido:**
+
+-   `p-4`: Agrega un margen de 4px a todos los lados del contenido.
+-   `text-lg font-bold text-gray-900`: Establece el tamaño de fuente del título a `lg`, lo pone en negrita y usa un color gris oscuro.
+-   `text-sm text-gray-700`: Establece el tamaño de fuente de la descripción a `sm` y usa un color gris claro.
+-   `text-lg font-bold text-green-500`: Establece el tamaño de fuente del precio a `lg`, lo pone en negrita y usa un color verde.
