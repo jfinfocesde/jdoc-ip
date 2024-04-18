@@ -1,0 +1,149 @@
+# La propiedad display en CSS
+
+La propiedad `display` en CSS es una herramienta fundamental para controlar el comportamiento y la representación visual de los elementos HTML en una página web. Permite definir cómo se comportará un elemento en el flujo del documento, cómo ocupará el espacio y cómo interactuará con otros elementos.
+
+## **Comportamiento por defecto:**
+
+Cada elemento HTML tiene un tipo de visualización predeterminado, que se define en las especificaciones HTML. Por ejemplo, los párrafos (`<p>`) son elementos de bloque por defecto, lo que significa que ocupan todo el ancho disponible y comienzan en una nueva línea. Los enlaces (`<a>`) son elementos en línea, lo que significa que se muestran en la misma línea que el texto circundante.
+
+## **Modificando el comportamiento:**
+
+La propiedad `display` permite anular el tipo de visualización predeterminado de un elemento y establecer uno nuevo. Esto puede ser útil para crear diseños personalizados, organizar contenido de manera diferente o lograr efectos visuales específicos.
+
+## **Valores comunes de display:**
+
+-   **block:** El elemento se comporta como un bloque, ocupando todo el ancho disponible y comenzando en una nueva línea.
+-   **inline:** El elemento se comporta como un elemento en línea, fluyendo junto al texto circundante sin ocupar un ancho completo.
+-   **inline-block:** Combina características de `inline` y `block`. El elemento se comporta como un elemento en línea, pero ocupa un ancho y alto propios.
+-   **none:** El elemento se oculta por completo de la vista.
+-   **flex:** El elemento se convierte en un contenedor flexible, lo que permite un control preciso del diseño y la distribución de sus elementos secundarios.
+-   **grid:** El elemento se convierte en un contenedor de cuadrícula, permitiendo crear diseños en forma de cuadrícula con filas y columnas.
+**Ejemplos:**
+
+## **1\. Cambiar un párrafo a elemento en línea:**
+
+```css
+p {
+  display: inline;
+}
+```
+
+En este ejemplo, todos los párrafos (`<p>`) se mostrarán en la misma línea que el texto circundante, en lugar de comenzar en nuevas líneas.
+
+## **2\. Mostrar un div como bloque con ancho específico:**
+
+```css
+.mi-div {
+  display: block;
+  width: 300px;
+}
+```
+
+En este ejemplo, el elemento con la clase `.mi-div` se comportará como un bloque, ocupando un ancho de 300 píxeles.
+
+## **3\. Ocultar un elemento:**
+
+```css
+.elemento-oculto {
+  display: none;
+}
+```
+
+En este ejemplo, el elemento con la clase `.elemento-oculto`
+
+# Posicionamiento CSS
+
+El posicionamiento CSS es un concepto fundamental para controlar la ubicación de los elementos en una página web. Permite definir dónde se ubicará un elemento en relación con otros elementos o con el borde del navegador.
+
+## Tipos de Posicionamiento
+
+Existen tres tipos principales de posicionamiento CSS:
+
+## **1\. Posicionamiento estático (static):**
+
+Es el valor predeterminado para todos los elementos. El elemento se coloca en la posición que especifica el flujo normal del documento HTML.
+
+## **2\. Posicionamiento relativo (relative):**
+
+Mueve el elemento de su posición normal sin afectar el flujo del documento. Es decir, el espacio que ocupa el elemento sigue siendo reservado, como si estuviera presente en su posición original.
+
+### **Ejemplo:**
+
+```css
+.elemento-relativo {
+  position: relative;
+  top: 20px;
+  left: 50px;
+}
+```
+
+En este ejemplo, el elemento `.elemento-relativo` se moverá 20 píxeles hacia arriba y 50 píxeles hacia la izquierda desde su posición original.
+
+## **3\. Posicionamiento absoluto (absolute):**
+
+Elimina el elemento del flujo normal del documento y lo posiciona en relación con su contenedor más cercano (no necesariamente el borde del navegador). El espacio que ocupaba el elemento en su posición original ya no se reserva.
+
+### **Ejemplo:**
+
+```css
+.elemento-absoluto {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+```
+
+En este ejemplo, el elemento `.elemento-absoluto` se posicionará 50 píxeles desde la parte superior y 100 píxeles desde la izquierda de su contenedor más cercano.
+
+## **4\. Posicionamiento fijo (fixed):**
+
+Similar al posicionamiento absoluto, pero el elemento se posiciona en relación con la ventana del navegador, lo que significa que permanecerá visible incluso al desplazarse por la página.
+
+### **Ejemplo:**
+
+
+```css
+.elemento-fijo {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+```
+
+En este ejemplo, el elemento `.elemento-fijo` se posicionará 20 píxeles desde la parte superior y 20 píxeles desde la derecha de la ventana del navegador.
+
+## Propiedades de Posicionamiento
+
+Las propiedades CSS más comunes para el posicionamiento son:
+
+-   `position`: Especifica el tipo de posicionamiento (static, relative, absolute, fixed).
+-   `top`: Define la posición vertical del elemento.
+-   `left`: Define la posición horizontal del elemento.
+-   `right`: Define la posición horizontal del elemento desde el borde derecho de su contenedor.
+-   `bottom`: Define la posición vertical del elemento desde el borde inferior de su contenedor.
+-   `z-index`: Controla el orden de superposición de los elementos posicionados.
+
+
+# Tailwindcss
+
+[https://tailwindcss.com/](https://tailwindcss.com/)
+
+
+## Componentes CSS Tailwind gratuitos
+
+- [https://www.floatui.com/](https://www.floatui.com/)
+- [https://www.hyperui.dev/](https://www.hyperui.dev/)
+- [https://a17t.miles.land/](https://a17t.miles.land/)
+- [https://kitwind.io/products/kometa/](https://kitwind.io/products/kometa/)
+- [https://daisyui.com/](https://daisyui.com/)
+- [https://tailwindcomponents.com/](https://tailwindcomponents.com/)
+- [https://www.tailwind-kit.com/](https://www.tailwind-kit.com/)
+- [https://merakiui.com/components](https://merakiui.com/components)
+- [https://mambaui.com/components/snackbar](https://mambaui.com/components/snackbar)
+- [https://flowbite.com/](https://flowbite.com/)
+- [https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation)
+- [https://kutty.netlify.app/](https://kutty.netlify.app/)
+- [https://postsrc.com/components](https://postsrc.com/components)
+- [https://tailblocks.cc/](https://tailblocks.cc/)
+- [https://www.tailwindtoolbox.com/](https://www.tailwindtoolbox.com/)
+- [https://blog.logrocket.com/10-best-tailwind-css-component-libraries/](https://blog.logrocket.com/10-best-tailwind-css-component-libraries/)
