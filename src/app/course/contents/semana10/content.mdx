@@ -1,0 +1,170 @@
+# Flexbox CSS
+
+## **¿Qué es Flexbox?**
+
+Flexbox, o "caja flexible", es un módulo de diseño de página en CSS que permite crear layouts flexibles y responsivos de una manera más fácil y eficiente.
+
+## **¿Cómo funciona Flexbox?**
+
+Flexbox se basa en un modelo de contenedor y elementos flexibles. El contenedor, denominado "flex container", es un elemento HTML al que se le aplica la propiedad `display: flex` o `display: inline-flex`. Los elementos flexibles, o "flex items", son los elementos HTML que se encuentran dentro del contenedor flex.
+
+## **Propiedades Flexbox**
+
+Existen diversas propiedades CSS que permiten controlar el comportamiento de los elementos flex dentro del contenedor flex. Algunas de las propiedades más importantes son:
+
+-   **flex-direction:** Define la dirección en la que se distribuyen los elementos flex. Los valores posibles son `row` (por defecto, horizontal), `column` (vertical), `row-reverse` y `column-reverse`.
+-   **flex-wrap:** Determina si los elementos flex deben ajustarse en una sola línea o si pueden pasar a la siguiente línea cuando no hay suficiente espacio. Los valores posibles son `nowrap` (por defecto, una sola línea) y `wrap`.
+-   **justify-content:** Controla la alineación horizontal de los elementos flex dentro del contenedor flex. Los valores posibles son `flex-start` (alineado a la izquierda), `center` (centrado), `flex-end` (alineado a la derecha), `space-between` (distribuye el espacio uniformemente entre los elementos) y `space-around` (agrega espacio alrededor de cada elemento).
+-   **align-items:** Controla la alineación vertical de los elementos flex dentro del contenedor flex. Los valores posibles son `flex-start` (alineado en la parte superior), `center` (centrado), `flex-end` (alineado en la parte inferior), `stretch` (estira los elementos para que ocupen toda la altura disponible) y `baseline` (alinea los elementos por la línea base).
+-   **order:** Define el orden en el que se muestran los elementos flex. Los valores válidos son números enteros.
+-   **flex-grow:** Define cómo se distribuye el espacio adicional entre los elementos flex. Un valor mayor significa que el elemento tendrá más espacio.
+
+## **Ventajas de Flexbox**
+
+Flexbox ofrece varias ventajas sobre los métodos tradicionales de diseño de página, como:
+
+-   **Flexibilidad:** Flexbox permite crear layouts más flexibles y adaptables a diferentes tamaños de pantalla.
+-   **Facilidad de uso:** Flexbox es más fácil de usar y entender que otros métodos, como floats o tablas.
+-   **Alineación:** Flexbox proporciona herramientas poderosas para alinear elementos de manera precisa y eficiente.
+-   **Responsividad:** Flexbox es ideal para crear diseños responsivos que se adaptan a diferentes dispositivos.
+
+
+## Ejemplos de Flexbox CSS
+
+## **1\. Alineación de elementos**
+
+Este ejemplo muestra cómo alinear elementos horizontal y verticalmente dentro de un contenedor flex:
+
+```html
+<div class="contenedor-flex">
+  <div class="item">Elemento 1</div>
+  <div class="item">Elemento 2</div>
+  <div class="item">Elemento 3</div>
+</div>
+```
+
+```css
+.contenedor-flex {
+  display: flex;
+  flex-direction: row; /* Alineación horizontal */
+  justify-content: center; /* Alineación horizontal: centrada */
+  align-items: center; /* Alineación vertical: centrada */
+}
+
+.item {
+  background-color: #ccc;
+  padding: 10px;
+  margin: 5px;
+}
+```
+
+## **2\. Distribución de espacio**
+
+Este ejemplo muestra cómo distribuir el espacio entre elementos flex de manera uniforme:
+
+```html
+<div class="contenedor-flex">
+  <div class="item">Elemento 1</div>
+  <div class="item">Elemento 2</div>
+  <div class="item">Elemento 3</div>
+</div>
+```
+
+```css
+.contenedor-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; /* Distribución de espacio uniforme */
+  align-items: center;
+}
+
+.item {
+  background-color: #ccc;
+  padding: 10px;
+  margin: 5px;
+}
+```
+
+## **3\. Ajuste de tamaño de elementos**
+
+Este ejemplo muestra cómo ajustar el tamaño de elementos flex para que ocupen todo el espacio disponible:
+
+HTML
+
+```html
+<div class="contenedor-flex">
+  <div class="item">Elemento 1</div>
+  <div class="item">Elemento 2</div>
+  <div class="item">Elemento 3</div>
+</div>
+```
+
+```css
+.contenedor-flex {
+  display: flex;
+  flex-direction: row;  
+}
+
+.item {
+  flex-grow: 1; /* Ajusta el tamaño de los elementos para que ocupen todo el espacio disponible */
+  background-color: #ccc;
+  padding: 10px;
+  margin: 5px;
+}
+```
+
+## **4\. Ejemplo de Flexbox con wrap**
+
+**Problema:**
+
+Imagina que tienes un contenedor con varios elementos que deben distribuirse de manera flexible. Algunos de estos elementos tienen un ancho mayor que el ancho disponible del contenedor. ¿Cómo puedes lograr que los elementos se ajusten y muestren correctamente sin superponerse?
+
+**Solución:**
+
+La propiedad `flex-wrap` en Flexbox te permite controlar cómo se comportan los elementos dentro del contenedor cuando no caben en una sola línea. Al usar `flex-wrap: wrap`, los elementos se distribuirán automáticamente en varias líneas, ajustándose al ancho del contenedor.
+
+```html
+<div class="contenedor">
+  <div class="item">Elemento 1</div>
+  <div class="item">Elemento 2 un poco más largo</div>
+  <div class="item">Elemento 3</div>
+  <div class="item">Elemento 4</div>
+  <div class="item">Y un elemento 5 aún más largo</div>
+</div>
+```
+
+```css
+.contenedor {
+  display: flex;
+  flex-wrap: wrap; /* Activa la propiedad wrap */
+  width: 400px; /* Define el ancho del contenedor */
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.item {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin: 5px;
+  text-align: center; /* Centra el texto dentro de los elementos */
+}
+```
+
+**Explicación:**
+
+En este ejemplo:
+
+-   El contenedor tiene la clase `contenedor` y se define como un contenedor flexbox con un ancho de 400px.
+-   La propiedad `flex-wrap: wrap` se aplica al contenedor, lo que indica que los elementos flex internos deben ajustarse en varias líneas si no caben en una sola.
+-   Cada elemento tiene la clase `item` y se define con un color de fondo, relleno y margen.
+-   Se agrega `text-align: center` a los elementos para centrar el texto dentro de cada uno.
+
+**Resultado:**
+
+Con esta configuración, los elementos se distribuirán en dos líneas dentro del contenedor. Los elementos más anchos ocuparán todo el ancho disponible en cada línea, mientras que los elementos más pequeños se ajustarán a su tamaño. De esta manera, todos los elementos se muestran correctamente sin superponerse.
+
+# Tailwindcss
+
+## Flexbox & Grid
+
+[https://tailwindcss.com/docs/flex-basis](https://tailwindcss.com/docs/flex-basis)

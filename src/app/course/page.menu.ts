@@ -174,6 +174,23 @@ export const itemsInfo: itemsInfoType[] = [
             // },
         ]
     },    
+    {
+        href: "",
+        label: "Semana 10",
+        date: '2024-4-25',
+        submenu: [
+            {
+                href: "/course/contents/semana10",
+                label: "Contenido",
+                date: '2024-4-25',
+            },
+            // {
+            //     href: "/course/activities/actividad5",
+            //     label: "Actividad 5",
+            //     date: '2024-4-18',
+            // },
+        ]
+    },    
 ]
 
 
