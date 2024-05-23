@@ -1,0 +1,266 @@
+# SeudoClases y PseudoElementos en CSS
+
+
+Las **pseudoClases** y **pseudoElementos** en CSS son herramientas poderosas que permiten a los desarrolladores web agregar estilos y funcionalidades a elementos HTML sin necesidad de modificar su estructura.
+
+## **PseudoClases:** 
+
+Son selectores que se añaden a los selectores existentes para especificar un estado o comportamiento particular del elemento. Por ejemplo, podemos usar `:hover` para cambiar el estilo de un elemento cuando el cursor pasa sobre él, o `:checked` para dar estilo a un elemento de formulario que está marcado.
+
+En este ejemplo, se mostrará cómo utilizar algunas de las pseudoClases más comunes en CSS, junto con su código HTML correspondiente. Se creará una página web simple con un menú de navegación, un botón, un formulario y algunos párrafos de texto.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Pseudoclases</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Pseudoclases</h1>
+  
+  <a href="#">Enlace</a>
+
+  <div>
+    <p>Párrafo 1</p>
+    <p>Párrafo 2</p>
+    <p>Párrafo 3</p>
+  </div>
+
+  <input type="text" placeholder="Introduce texto">
+  <button>Enviar</button>
+</body>
+</html>
+```
+
+```css
+/* Pseudoclase :link */
+a:link {
+  color: blue;
+  text-decoration: none;
+}
+
+/* Pseudoclase :visited */
+a:visited {
+  color: purple;
+}
+
+/* Pseudoclase :hover */
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+/* Pseudoclase :active */
+a:active {
+  color: green;
+}
+
+/* Pseudoclase :first-child */
+div p:first-child {
+  font-weight: bold;
+}
+
+/* Pseudoclase :last-child */
+div p:last-child {
+  font-style: italic;
+}
+
+/* Pseudoclase :nth-child(n) */
+div p:nth-child(2) {
+  color: blue;
+}
+
+/* Pseudoclase :focus */
+input:focus {
+  background-color: lightgray;
+}
+
+/* Pseudoclase :enabled */
+button:enabled {
+  background-color: green;
+  color: white;
+}
+
+/* Pseudoclase :disabled */
+button:disabled {
+  background-color: gray;
+  color: white;
+}
+```
+
+### **Explicación del CSS:**
+
+-   Se definen estilos generales para enlaces, incluyendo el color y la decoración de texto.
+-   Se aplican estilos específicos para enlaces visitados y cuando se pasa el cursor sobre ellos.
+-   Se da estilo al primer párrafo y a la primera línea del segundo párrafo.
+-   Se cambia el color de fondo del botón cuando se hace clic.
+-   Se agrega un borde rojo al campo de nombre si es requerido y no se ha ingresado ningún valor.
+-   Se cambia el color de fondo de la casilla de verificación cuando está marcada.
+-   Se deshabilita el botón de envío del formulario y se reduce su opacidad si hay campos inválidos.
+
+
+
+## **PseudoElementos:** 
+
+A diferencia de las pseudoClases, los pseudoElementos no representan elementos HTML existentes, sino que **crean nuevos elementos ficticios** dentro del elemento seleccionado. Se utilizan principalmente para agregar contenido decorativo o para modificar la apariencia de partes específicas del elemento. Por ejemplo, podemos usar `::before` para insertar contenido antes del elemento, o `::after` para insertar contenido después.
+
+Ejemplo completo de HTML y CSS que utiliza pseudoelementos:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Pseudoelementos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Pseudoelementos</h1>
+
+  <p class="quote">
+    "Nunca consideres el estudio como una obligación, sino como una oportunidad para penetrar en el bello y maravilloso mundo del saber." <span class="author">Albert Einstein</span>
+  </p>
+
+  <div class="bookmark">
+    <p>Contenido del marcador</p>
+  </div>
+
+  <ul class="list">
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+    <li>Elemento 3</li>
+  </ul>
+</body>
+</html>
+```
+
+```css
+/* Pseudoelemento ::before */
+.quote::before {
+  content: "\201C"; /* Comilla inicial */
+  font-size: 2em;
+  color: #ccc;
+}
+
+/* Pseudoelemento ::after */
+.quote::after {
+  content: "\201D"; /* Comilla final */
+  font-size: 2em;
+  color: #ccc;
+}
+
+/* Pseudoelemento ::first-letter */
+.quote::first-letter {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Pseudoelemento ::first-line */
+.quote::first-line {
+  font-style: italic;
+}
+
+/* Pseudoelemento ::after */
+.author::after {
+  content: " -";
+}
+
+/* Pseudoelemento ::before */
+.bookmark::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  margin-right: 10px;
+}
+
+/* Pseudoelemento ::after */
+.list li::after {
+  content: "\2713"; /* Marca de verificación */
+  color: green;
+  margin-left: 10px;
+}
+```
+## Los @media en CSS
+
+Los @media en CSS son reglas que permiten aplicar estilos específicos dependiendo de ciertas condiciones, como las características del dispositivo o el tamaño de la ventana del navegador. Esto es especialmente útil para crear diseños responsivos que se adapten a diferentes tamaños de pantalla.
+
+La sintaxis básica de una regla @media es la siguiente:
+
+```css
+@media media-type and (media-feature-rule) {
+  /* Estilos a aplicar cuando se cumpla la condición */
+}
+```
+
+-   `media-type`: Especifica el tipo de dispositivo al que se aplica la regla. Algunos ejemplos comunes son `screen` (pantallas), `print` (impresión) y `all` (todos los dispositivos).
+-   `media-feature-rule`: Define la condición que debe cumplirse para que se apliquen los estilos. Algunas reglas comunes son `max-width`, `min-width`, `orientation` (orientación de la pantalla) y `resolution` (resolución de la pantalla)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo @media</title>
+  <style>
+    /* Estilos base */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    /* Estilos para pantallas pequeñas */
+    @media (max-width: 600px) {
+      .container {
+        background-color: #e6e6e6;
+        padding: 10px;
+      }
+    }
+
+    /* Estilos para pantallas grandes */
+    @media (min-width: 900px) {
+      .container {
+        background-color: #d9d9d9;
+        padding: 30px;
+      }
+    }
+
+    /* Estilos para impresión */
+    @media print {
+      body {
+        background-color: white;
+        color: black;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Ejemplo de @media</h1>
+    <p>Este es un ejemplo de cómo utilizar las reglas @media en CSS.</p>
+  </div>
+</body>
+</html>
+```
+
+En este ejemplo:
+
+1.  Los estilos base se aplican a todos los dispositivos.
+2.  Cuando el ancho de la pantalla es menor o igual a 600px, se aplican los estilos dentro de `@media (max-width: 600px)`.
+3.  Cuando el ancho de la pantalla es mayor o igual a 900px, se aplican los estilos dentro de `@media (min-width: 900px)`.
+4.  Cuando se imprime el documento, se aplican los estilos dentro de `@media print`.
